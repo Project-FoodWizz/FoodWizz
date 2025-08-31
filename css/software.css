@@ -251,6 +251,61 @@ body {
     outline: none !important;
 }
 /*final de nav*/
+/* ================== HERO SECTION ================== */
+.section-hero {
+  height: 1000px
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Texto a la izquierda */
+.hero-text {
+  max-width: 45%;
+  padding-left: 60px;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  color: #222;
+}
+
+/* Círculo naranja al lado derecho */
+.hero-circle {
+  position: absolute;
+  right: 0;
+  margin-top: -300px;
+  margin-right: -500px;
+  width: 1000px;
+  height: 1000px;
+  background: orange;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+
+/* Imagen dentro del círculo */
+.hero-img {
+  margin-top: 200px;
+  max-height: 100%;
+  position: relative;
+  right: 300px;
+}
 
 body {
   font-family: Arial, sans-serif;
