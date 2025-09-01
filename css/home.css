@@ -346,7 +346,7 @@ body {
     margin-bottom: -5px;
     position: relative;
     display: inline-block;
-    
+    font-family: poppins;
 }
 
 .section-subtitle {
@@ -552,6 +552,7 @@ body {
     text-align: justify;
     margin: 12px;
 }
+
 
 .card-glow-effect {
     position: absolute;
@@ -962,7 +963,7 @@ body {
 
 
 .contact-section {
-    background: linear-gradient(135deg, var(--olive-green) 0%, var(--teal-blue) 100%);
+        background: linear-gradient(1deg, #ff7f0dbf 0%, #ffffff 100%);
 }
 
 .contact-content {
