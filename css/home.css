@@ -85,8 +85,9 @@ body {
     align-items: center;
 }
 
-/*Inicio del CSS del formulario de contact*/
-
+/**********************************
+ 	 Contact page CSS Start
+ **********************************/
 
 .lens-contact-box {
     background: var(--lenslux-white);
@@ -156,8 +157,6 @@ textarea {
     border-radius: 10px;
     padding: 36px 40px 34px;
 }
-
-
 
 /* Contenedor del logo */
 .logo-container {
