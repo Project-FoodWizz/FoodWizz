@@ -101,6 +101,12 @@
     margin-bottom: 15px;
     }
 
+    .footer-links li::before{
+        content: "—";
+        color: #fff;
+        padding-right: 5px;
+    }
+
     .footer-links a {
     text-decoration: none;
     color: var(--link-color);
@@ -214,7 +220,7 @@
             <h3>Subscribe to Our Newsletter</h3>
             <p>Sign up for getting more offers, discounts and gifts every week. We respect your privacy, so we never share your info.</p>
             <form class="footer-newsletter-form">
-                <input type="email" placeholder="Enter Your Email.." aria-label="Enter your email address">
+                <input type="email" placeholder="Enter Your Email.." aria-label="Enter your email address" style="margin-bottom: 0;">
                 <button type="submit" aria-label="Subscribe"><i class="fas fa-arrow-right"></i></button>
             </form>
         </div>
