@@ -18,6 +18,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Enlace al archivo CSS externo -->
     <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/body-web.css">
     <!-- CSS para la sección de preguntas frecuentes -->
     <link rel="stylesheet" href="css/frquestions.css">
     <!-- Importa Material Symbols para iconos del chatbot -->
@@ -25,56 +26,12 @@
     <link rel="stylesheet" href="css/chatbot.css">
     <!-- Importa el favicon -->
     <link rel="shortcut icon" href="assets/logos/IconoNaranja_Transp.svg" type="image/x-icon">
+    <script src="js/header-footer.js"></script>
 </head>
 <body>
 
     <!-- Barra de navegación -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <!-- Contenedor del logo -->
-            <div class="logo-container">
-                <div class="logo-3d">
-                    <img src="assets/logos/logo_N.svg" alt="">
-                    <div class="logo-glow"></div>
-                </div>
-            </div>
-            
-            <!-- Enlaces de navegación -->
-            <ul class="nav-links" id="navLinks">
-                <li class="nav-item">
-                    <a href="#home" class="nav-link">
-                        <span class="nav-text">Home</span>
-                        <div class="nav-hover-effect"></div>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="/aboutus.html" class="nav-link">
-                        <span class="nav-text">About Us</span>
-                        <div class="nav-hover-effect"></div>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="software.html" class="nav-link">
-                        <span class="nav-text">Software</span>
-                        <div class="nav-hover-effect"></div>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">
-                        <span class="nav-text">Contact Us</span>
-                        <div class="nav-hover-effect"></div>
-                        
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="Pages/loginRegister.html" class="nav-link signup-btn">
-                        <span class="nav-text">Log In / Sign Up</span>
-                        <div class="signup-glow"></div>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+    <div id="header-placeholder"></div>
 
     <!-- Sección Hero -->
     <section id="home" class="hero">
@@ -202,7 +159,7 @@
                 <h2 class="section-title bg-degrade">How We Help?</h2>
                 <p class="section-subtitle bg-degrade">Empowering your business with intelligent solutions</p>
             </div>
-          <!-- Cuadrícula de ayuda -->
+            <!-- Cuadrícula de ayuda -->
             <div class="help-grid">
                 <div class="help-card glass-morphism">
                     <div class="help-icon">
@@ -477,9 +434,7 @@
                 </div>
                 
                 <div class="faq-image">
-                    <img src="https://png.pngtree.com/png-vector/20231116/ourmid/pngtree-customer-service-representative-attending-calls-call-centre-png-image_10492820.png" 
-                         alt="Customer Service Representative" 
-                         class="customer-service-image">
+                    <img src="https://png.pngtree.com/png-vector/20231116/ourmid/pngtree-customer-service-representative-attending-calls-call-centre-png-image_10492820.png" alt="Customer Service Representative" class="customer-service-image">
                 </div>
             </div>
         </div>
@@ -529,7 +484,7 @@
         </div>
     </section>
 
-    <!-- Sección de contacto -->
+    <!-- ======================== Sección de contacto ========================-->
     <section id="contact" class="section contact-section">
         <div class="container">
             <div class="section-header">
@@ -587,80 +542,10 @@
         </div>
     </section>
 
-    <!-- Pie de página -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <!-- Sección de información de contacto -->
-                <div class="footer-section">
-                    <h3>Contact Information</h3>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Calle 12, Chorrera, Panamá, Panamá</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>Food.wizz@mottach.superate.org.pa</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <span>(+507) 6270-6753</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <span>(+53) 234-345</span>
-                    </div>
-                </div>
+    <!-- ===================== FOOTER ==================== = -->
+    <div id="footer-placeholder"></div>
 
-                <!-- Sección de redes sociales -->
-                <div class="footer-section">
-                    <h3>Follow Us</h3>
-                    <p>Stay connected with FoodWIZZ</p>
-                    <div class="social-links">
-                        <a href="#" class="social-link">
-                            <i class="fab fa-facebook-f"></i>
-                            <div class="social-glow"></div>
-                        </a>
-                        <a href="#" class="social-link">
-                            <i class="fab fa-twitter"></i>
-                            <div class="social-glow"></div>
-                        </a>
-                        <a href="#" class="social-link">
-                            <i class="fab fa-instagram"></i>
-                            <div class="social-glow"></div>
-                        </a>
-                        <a href="#" class="social-link">
-                            <i class="fab fa-linkedin-in"></i>
-                            <div class="social-glow"></div>
-                        </a>
-                    </div>
-                    <p class="social-handle">@foodwizz_507</p>
-                </div>
-
-                <!-- Sección de enlaces rápidos -->
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <div class="footer-links">
-                        <a href="#home">Home</a>
-                        <a href="#about">About Us</a>
-                        <a href="#software">Software</a>
-                        <a href="#contact">Contact</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Parte inferior del pie de página -->
-            <div class="footer-bottom">
-                <div class="footer-tagline">
-                    <span class="tagline-never">NEVER</span>
-                    <span class="tagline-run">RUN</span>
-                    <span class="tagline-out">OUT</span>
-                </div>
-                <p class="copyright">&copy; 2024 FoodWIZZ. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
+    <!-- =================== CHATBOT ==================== -->
     <div id="chatbot-container"></div>
     <!-- Aquí se cargará el chatbot que está en chatbot.html -->
     <script>

@@ -1,16 +1,5 @@
 /* FAQ Page Styles - Sección de Preguntas Frecuentes */
 
-/* Variables CSS esenciales */
-:root {
-    --vibrant-orange: #FF7F0D;
-    --cream-white: #fcfcfc;
-    --gray-dark: #333333;
-    --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.1);
-    --shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.15);
-    --transition-fast: 0.3s ease;
-    --transition-medium: 0.5s ease;
-}
-
 /* Sección de Preguntas Frecuentes */
 .faq-section {
     background: var(--cream-white);
