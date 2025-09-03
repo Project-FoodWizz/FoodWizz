@@ -85,6 +85,79 @@ body {
     align-items: center;
 }
 
+/**********************************
+ 	 Contact page CSS Start
+ **********************************/
+
+.lens-contact-box {
+    background: var(--lenslux-white);
+    box-shadow: var(--lenslux-shadow);
+    margin: 0 0 30px;
+    padding: 20px 20px 10px;
+    border-radius: 10px;
+    border-left: 1px solid var(--lenslux-primary-color);
+    border-right: 1px solid var(--lenslux-primary-color);
+}
+
+.lens-contact-box-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.lens-contact-box-inner span {
+    width: 100px;
+    display: inline-block;
+    margin: 0 0 10px;
+}
+
+.lens-contact-box-inner span svg {
+    height: 60px;
+    fill: var(--lenslux-primary-color);
+}
+
+.lens-contact-info {
+    margin: 0 0 10px;
+    width: calc(100% - 100px);
+}
+
+.lens-contact-info p {
+    margin: 5px 0 0;
+    color: var(--lenslux-title-color);
+}
+
+.lens-contact-info h4 {
+    margin: 0 0 0;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.lens-contact-title h4 {
+    font-weight: 600;
+    font-size: 22px;
+}
+
+textarea {
+    height: 168px;
+}
+
+.lens-contact-title {
+    margin: 0 0 34px;
+    color: var(--lenslux-title-color);
+}
+
+.lens-contact-title h4,
+.lens-contact-title p {
+    margin: 0;
+}
+
+.lens-from-wrapper {
+    background: var(--lenslux-white);
+    box-shadow: var(--lenslux-shadow);
+    border-radius: 10px;
+    padding: 36px 40px 34px;
+}
+
 /* Contenedor del logo */
 .logo-container {
     position: relative;
@@ -270,6 +343,14 @@ body {
         .carousel-image.active {
             display: block;
         }
+        .carousel-content {
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between; 
+            min-height: 100vh; background: 
+            linear-gradient(90deg, #f7f5f4 60%, #ff8000 100%); 
+            padding: 40px 60px;
+        }
         .carousel-btn{
             height: 5%;
             border-radius: 100% !important;
@@ -346,7 +427,7 @@ body {
     margin-bottom: -5px;
     position: relative;
     display: inline-block;
-    
+    font-family: poppins;
 }
 
 .section-subtitle {
@@ -552,6 +633,7 @@ body {
     text-align: justify;
     margin: 12px;
 }
+
 
 .card-glow-effect {
     position: absolute;
@@ -962,7 +1044,7 @@ body {
 
 
 .contact-section {
-    background: linear-gradient(135deg, var(--olive-green) 0%, var(--teal-blue) 100%);
+        background: linear-gradient(1deg, #ff7f0dbf 0%, #ffffff 100%);
 }
 
 .contact-content {

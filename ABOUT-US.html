@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título de la página -->
+    <title>FoodWIZZ - Smart Food Inventory Management</title>
+    <!-- Descripción de la página -->
+    <meta name="description" content="Revolutionary food inventory management software for restaurants and food businesses. Easy inventory, maximum profits.">
+    <!-- Preconecta a Google Fonts para cargar las fuentes más rápido -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Importa las fuentes Poppins e Inter de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Importa Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Enlace al archivo CSS externo -->
+    <link rel="stylesheet" href="css/home.css">
+    <!-- CSS para la sección de preguntas frecuentes -->
+    <link rel="stylesheet" href="css/frquestions.css">
+    <!-- Importa Material Symbols para iconos del chatbot -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <link rel="stylesheet" href="css/chatbot.css">
+    <!-- Importa el favicon -->
+    <link rel="shortcut icon" href="assets/logos/IconoNaranja_Transp.svg" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Barra de navegación -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <!-- Contenedor del logo -->
+            <div class="logo-container">
+                <div class="logo-3d">
+                    <img src="assets/logos/logo_N.svg" alt="">
+                    <div class="logo-glow"></div>
+                </div>
+            </div>
+            
+            <!-- Enlaces de navegación -->
+            <ul class="nav-links" id="navLinks">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">
+                        <span class="nav-text">Home</span>
+                        <div class="nav-hover-effect"></div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/Pages/aboutus.html" class="nav-link">
+                        <span class="nav-text">About Us</span>
+                        <div class="nav-hover-effect"></div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="software.html" class="nav-link">
+                        <span class="nav-text">Software</span>
+                        <div class="nav-hover-effect"></div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">
+                        <span class="nav-text">Contact Us</span>
+                        <div class="nav-hover-effect"></div>
+                        
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="Pages/loginRegister.html" class="nav-link signup-btn">
+                        <span class="nav-text">Log In / Sign Up</span>
+                        <div class="signup-glow"></div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+        <!-- Sección de preguntas frecuentes -->
+    <section class="section faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title bg-cream"></h2>Frequently Asked Questions</h2>
+                <p class="section-subtitle bg-cream">Find answers to common questions about FoodWIZZ</p>
+            </div>
+            
+            <div class="faq-content">
+                <div class="faq-accordion">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    <img src="assets/logos/IconoNaranja.svg" alt="FoodWIZZ" class="faq-icon-small me-2">
+                                    How can I add new ingredients to the inventory?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Go to the Dashboard, tap Add Ingredient, and fill in the necessary product details (name, quantity, unit, etc.), then save. <strong>This way our automated app can update your inventory automatically.</strong>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <img src="assets/logos/IconoNaranja.svg" alt="FoodWIZZ" class="faq-icon-small me-2">
+                                    Will I get an alert when ingredients are running low?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes. When stock is low, a notification will appear in the Alerts section, accessible via Low Stock Items on the Dashboard. <strong>This helps you restock on time and avoid running out of key items.</strong>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                    <img src="assets/logos/IconoNaranja.svg" alt="FoodWIZZ" class="faq-icon-small me-2">
+                                    Can I set a minimum stock level for each ingredient?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Absolutely. You can define minimum stock levels for each item to trigger low stock alerts based on your sales pace. <strong>That way, the system alerts you before shortages impact your operations.</strong>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    <img src="assets/logos/IconoNaranja.svg" alt="FoodWIZZ" class="faq-icon-small me-2">
+                                    How often are my reports updated?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Reports are automatically generated every 7 days to help you analyze stock changes, top-selling items, and performance trends. <strong>This gives you regular insights without manual tracking.</strong>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    <img src="assets/logos/IconoNaranja.svg" alt="FoodWIZZ" class="faq-icon-small me-2">
+                                    What types of reports can I generate?
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    You can generate reports for sales, most sold dishes, and current inventory status. <strong>These help you identify your inventory trends.</strong>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                    <img src="assets/logos/IconoNaranja.svg" alt="FoodWIZZ" class="faq-icon-small me-2">
+                                    Can I use the app without an internet connection?
+                                </button>
+                            </h2>
+                            <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes. The app supports offline mode, and your data syncs automatically once you're back online. <strong>This ensures you can keep working even with a non-regular internet connection.</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-image">
+                    <img src="https://png.pngtree.com/png-vector/20231116/ourmid/pngtree-customer-service-representative-attending-calls-call-centre-png-image_10492820.png" 
+                         alt="Customer Service Representative" 
+                         class="customer-service-image">
+                </div>
+            </div>
+        </div>
+
+    <!-- Sección de contacto -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title bg-degrade">Contact Us</h2>
+                <p class="section-subtitle bg-degrade">Get in touch with our team to start your inventory management journey</p>
+            </div>
+
+            <!-- Contenido de contacto -->
+            <div class="contact-content">
+                <!-- Formulario de contacto -->
+                <form class="contact-form floating-form" onsubmit="handleSubmit(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" id="fullName" name="fullName" required>
+                            <div class="input-glow"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required>
+                            <div class="input-glow"></div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                            <div class="input-glow"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="company">Company Name</label>
+                            <input type="text" id="company" name="company" required>
+                            <div class="input-glow"></div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Describe your Issue</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <div class="input-glow"></div>
+                    </div>
+
+                    <button type="submit" class="submit-button">
+                        <span>Submit</span>
+                        <i class="fas fa-paper-plane"></i>
+                        <div class="submit-glow"></div>
+                    </button>
+
+                    <p class="contact-note">We will contact you as soon as possible...</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Sección de información de contacto -->
+                <div class="footer-section">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Calle 12, Chorrera, Panamá, Panamá</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>Food.wizz@mottach.superate.org.pa</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>(+507) 6270-6753</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>(+53) 234-345</span>
+                    </div>
+                </div>
+
+                <!-- Sección de redes sociales -->
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <p>Stay connected with FoodWIZZ</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                            <div class="social-glow"></div>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                            <div class="social-glow"></div>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                            <div class="social-glow"></div>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                            <div class="social-glow"></div>
+                        </a>
+                    </div>
+                    <p class="social-handle">@foodwizz_507</p>
+                </div>
+
+                <!-- Sección de enlaces rápidos -->
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <div class="footer-links">
+                        <a href="#home">Home</a>
+                        <a href="#about">About Us</a>
+                        <a href="#software">Software</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Parte inferior del pie de página -->
+            <div class="footer-bottom">
+                <div class="footer-tagline">
+                    <span class="tagline-never">NEVER</span>
+                    <span class="tagline-run">RUN</span>
+                    <span class="tagline-out">OUT</span>
+                </div>
+                <p class="copyright">&copy; 2024 FoodWIZZ. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="chatbot-container"></div>
+    <!-- Aquí se cargará el chatbot que está en chatbot.html -->
+    <script>
+        fetch('Pages/chatbot.html')
+        .then(res => res.text())
+        .then(html => {
+            document.getElementById('chatbot-container').innerHTML = html;
+            // Si tu JS necesita inicialización
+            if (typeof initChatbot === 'function') {
+                initChatbot();
+            }
+        });
+    </script>
+    <!-- Enlace al archivo JavaScript externo -->
+    <script src="js/home.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Emoji Mart -->
+    <script src="https://cdn.jsdelivr.net/npm/emoji-mart@latest/dist/browser.js"></script>
+    <script src="js/chatbot.js"></script>
+</body>
+</html>

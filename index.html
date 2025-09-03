@@ -48,7 +48,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/Pages/aboutus.html" class="nav-link">
+                    <a href="/aboutus.html" class="nav-link">
                         <span class="nav-text">About Us</span>
                         <div class="nav-hover-effect"></div>
                     </a>
@@ -67,14 +67,8 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#login.css" class="nav-link login-btn">
-                        <span class="nav-text">Login</span>
-                        <div class="login-glow"></div>
-                    </a>
-                </li>
-                <li class="nav-item">
                     <a href="Pages/loginRegister.html" class="nav-link signup-btn">
-                        <span class="nav-text">Sign Up</span>
+                        <span class="nav-text">Log In / Sign Up</span>
                         <div class="signup-glow"></div>
                     </a>
                 </li>
@@ -86,20 +80,65 @@
     <section id="home" class="hero">
         <section class="caja-carrusel">
             <div class="carousel">
+                <!-- boton anterior -->
                 <img src="assets/icon/flechaIzq.svg" class="carousel-btn prev alt="Anterior">
+                <!-- las cajas del carruseles -->
                 <div class="carousel-images">
+                    <!-- primera caja del carrusel -->
                     <div class="carousel-image">
-                        <img src="assets/img/Home1.png" alt="Imagen 1" style="width:100%;">
+                        <!-- la imagen puede ser editada por un div para que tenga un contenido -->
+                        <div class="carousel-content">
+                            <div style="flex: 1; max-width: 55%;">
+                                <h1 style="font-family: 'Poppins', sans-serif; font-weight: 900; font-size: 3rem; color: #181818; margin-bottom: 32px;">
+                                    "The only software you can trust with your kitchen."
+                                </h1>
+                                <p style="font-family: 'Poppins', sans-serif; font-size: 1.5rem; color: #222; margin-top: 0;">
+                                    We are more than just a service;<br>
+                                    we are your partner towards<br>
+                                    success.
+                                </p>
+                            </div>
+                            <div style="flex: 1; display: flex; justify-content: flex-end;">
+                                <img src="assets/img/carrito 1.png" alt="Food Truck" style="max-width: 90%; height: auto; border-radius: 0; box-shadow: none;">
+                            </div>
+                        </div>
                     </div>
+                    <!-- segunda caja del carrusel -->
                     <div class="carousel-image" style="position: relative;">
-                        <img src="assets/img/Home2.png" alt="Imagen 2" style="width:100%;">
-                        <button class="cta-btn">Start your kitchen's journey today.</button>
+                        <div class="carousel-content">
+                            <div style="flex: 1; display: flex; justify-content: flex-end;">
+                                <img src="assets/img/carrito 1.png" alt="Food Truck" style="max-width: 90%; height: auto; border-radius: 0; box-shadow: none;">
+                            </div>
+                            <div style="flex: 1; max-width: 55%;">
+                                <h1 style="font-family: 'Poppins', sans-serif; font-weight: 900; font-size: 3rem; color: #181818; margin-bottom: 32px;">
+                                    "We believe that great things happhen when the right people come together."
+                                </h1>
+                                <p style="font-family: 'Poppins', sans-serif; font-size: 1.5rem; color: #222; margin-top: 0;">
+                                    <button class="cta-btn">Start your kitchen's journey today.</button>
+                                </p>
+                            </div>
+                        </div>
                     </div>
                     <!-- Clon de la primera imagen para el loop -->
                     <div class="carousel-image">
-                        <img src="assets/img/Home1.png" alt="Imagen 1" style="width:100%;">
+                        <div class="carousel-content">
+                            <div style="flex: 1; max-width: 55%;">
+                                <h1 style="font-family: 'Poppins', sans-serif; font-weight: 900; font-size: 3rem; color: #181818; margin-bottom: 32px;">
+                                    "The only software you can trust with your kitchen."
+                                </h1>
+                                <p style="font-family: 'Poppins', sans-serif; font-size: 1.5rem; color: #222; margin-top: 0;">
+                                    We are more than just a service;<br>
+                                    we are your partner towards<br>
+                                    success.
+                                </p>
+                            </div>
+                            <div style="flex: 1; display: flex; justify-content: flex-end;">
+                                <img src="assets/img/carrito 1.png" alt="Food Truck" style="max-width: 90%; height: auto; border-radius: 0; box-shadow: none;">
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <!-- boton despues -->
                 <img src="assets/icon/flechaDer.svg" class="carousel-btn next" alt="Siguiente">
             </div>
         </section>
