@@ -327,9 +327,13 @@ body {
     
 }
 
+.banner {
+  margin-left: 45px;
+}
 /* Caja de texto */
 .text-box {
   width: 300px;
+  margin-bottom: 50px;
 }
 
 .text {
@@ -401,6 +405,7 @@ body {
 }
 
 .circle {
+  margin-top: 50px;
   width: 120px;
   height: 120px;
   border-radius: 50%;
