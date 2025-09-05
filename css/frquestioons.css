@@ -1,8 +1,28 @@
+/* Isotipo en botones */
+.section-title,
+.section-subtitle {
+  color: white;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  font-weight: bold;
+}
+
+
+
 /* FAQ Page Styles - Sección de Preguntas Frecuentes */
 
 /* Sección de Preguntas Frecuentes */
+
+.backpic {
+  background-image: url('/assets/img/Soporte.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 60px 20px;
+  margin-top: -40px;
+}
+
+
 .faq-section {
-    background: var(--cream-white);
     padding: 0;
 }
 
