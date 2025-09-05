@@ -1,9 +1,6 @@
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
+
 /* Variables globales */
-=======
-=======
->>>>>>> Stashed changes
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
@@ -60,7 +57,6 @@ body {
     background: #f5f5f5;
 }
 
->>>>>>> Stashed changes
 img {
     max-width: 100%;
 }
@@ -70,8 +66,6 @@ img {
     margin: 0 auto;
 }
 
-<<<<<<< Updated upstream
-=======
 /*Barra de navegación*/
 .navbar {
     position: fixed;
@@ -313,7 +307,6 @@ p {
     flex-basis: 50%;
 }
 
->>>>>>> Stashed changes
 .brands {
     padding: 50px;
     display: flex;
@@ -337,7 +330,7 @@ p {
 }
 
 .brands-1 img {
-   width: 150px;
+    width: 150px;
 }
 
 .services {
@@ -415,8 +408,7 @@ h2 {
 }
 
 .about-img {
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
+
     width: 100%;
     border-radius: 15px;
     box-shadow: var(--shadow-soft);
@@ -444,9 +436,6 @@ input, textarea {
     font-size: 1rem;
     font-family: var(--font-primary);
     transition: all var(--transition-fast);
-=======
-=======
->>>>>>> Stashed changes
     flex-basis: 50%;
 }
 
@@ -853,8 +842,4 @@ input, textarea {
 
 .fade-in {
     animation: fadeInUp 1s ease-out;
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 }
