@@ -1,6 +1,9 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 /* Variables globales */
 =======
+=======
+>>>>>>> Stashed changes
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
@@ -413,6 +416,7 @@ h2 {
 
 .about-img {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     width: 100%;
     border-radius: 15px;
     box-shadow: var(--shadow-soft);
@@ -441,6 +445,8 @@ input, textarea {
     font-family: var(--font-primary);
     transition: all var(--transition-fast);
 =======
+=======
+>>>>>>> Stashed changes
     flex-basis: 50%;
 }
 
@@ -847,5 +853,8 @@ input, textarea {
 
 .fade-in {
     animation: fadeInUp 1s ease-out;
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 }
