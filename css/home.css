@@ -25,8 +25,7 @@
             display: flex; 
             align-items: center; 
             justify-content: space-between; 
-            min-height: 100vh; background: 
-            linear-gradient(90deg, #f7f5f4 60%, #ff8000 100%); 
+            min-height: 100vh; 
             padding: 40px 60px;
         }
         .carousel-btn{
