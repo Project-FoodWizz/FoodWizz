@@ -1,0 +1,141 @@
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- css del header -->
+    <style>
+        .header {
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+            padding: 20px 0;
+            border-bottom: 1px solid #e0e0e0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            transition: all var(--transition-fast);
+        }
+
+        .header-container {
+            max-width: 100%;
+            margin: 0 1%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo a {
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 50px;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar a {
+            font-family: var(--font-primary);
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #ff9900;
+        }
+
+        .header-icons {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .header-icons .icon {
+            position: relative;
+            font-size: 22px;
+            color: #555;
+            transition: color 0.3s;
+        }
+
+        .header-icons .icon:hover {
+            color: #ff9900;
+        }
+
+        .cart-icon {
+            position: relative;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background-color: #ff9900;
+            color: #fff;
+            border-radius: 50%;
+            padding: 2px 6px;
+            font-size: 12px;
+        }
+
+        .sign-in-btn {
+            background-color: #ff9900;
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s;
+            margin-left: 10px;
+        }
+
+        .sign-in-btn:hover {
+            background-color: #e68a00;
+        }
+    </style>
+</head>
+
+<!-- Header de la página -->
+<header class="header">
+    <div class="header-container">
+        <div class="logo">
+            <a href="#">
+                <img src="../assets/logos/logo_N.svg" alt="FoodWizz Logo">
+            </a>
+        </div>
+        <div class="header-right">
+            <nav class="navbar">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../Pages/software.html">Software</a></li>
+                    <li><a href="../Pages/aboutus.html">About Us</a></li>
+                    <li><a href="../Pages/contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <a href="#" class="icon"><i class="far fa-heart"></i></a>
+                <a href="#" class="icon cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+            <a href="#" class="sign-in-btn">SIGN IN</a>
+        </div>
+    </div>
+</header>

@@ -2,18 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
 /* Global Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Inter", sans-serif;
-}
 
-body {
-    min-height: 100vh;
-    background: linear-gradient(135deg, #ffe3b3, #ffcc80); /* Fondo más claro para un tema naranja */
-    color: #333;
-}
 
 /* Estilos rápidos para mostrar imágenes redondas */
 .chatbot-logo, .bot-avatar {
