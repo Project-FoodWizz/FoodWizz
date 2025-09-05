@@ -118,3 +118,16 @@
         padding: 1rem;
     }
 }
+
+.bannercontact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    border-radius: 8px; 
+    margin-left: 40px;
+    margin-right: 40px;
+}
