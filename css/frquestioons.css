@@ -12,6 +12,8 @@
     gap: 3rem;
     align-items: start;
     margin-top: 3rem;
+    margin-right: -850px;
+    margin-left: 630px;
 }
 
 /* Acordeón */
