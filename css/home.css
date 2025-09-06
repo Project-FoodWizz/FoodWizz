@@ -410,40 +410,6 @@
     }
 }
 
-.software-section .section-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    justify-content: center; 
-    margin-bottom: 3rem;
-    text-align: center; 
-}
-
-.software-section .section-header h2,
-.software-section .section-header p {
-    color: #ffffff !important; 
-    max-width: 800px;
-    text-align: center;
-}
-.software-section {
-    background: radial-gradient(circle at center, black, #ff8000 750%);
-    color: var(--white);
-}
-
-.software-features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 40px;
-    margin-top: 3rem;
-}
-
-.software-card {
-    height: 300px;
-    perspective: 1000px;
-    cursor: pointer;
-}
-
-
 .card-front {
     position: absolute;
     width: 100%;
@@ -462,20 +428,7 @@
     background-color: #FF7F0D;
 }
 
-.software-features{ /*luci estuvo aqui*/
-    height: 300px;
-}
 
-.software-icon {
-    font-size: 4rem;
-    color: var(--white);
-    margin-bottom: 1.5rem;
-    transition: all var(--transition-fast);
-}
-
-.software-card:hover .software-icon {
-    transform: scale(1.2) rotateZ(360deg);
-}
 
 .card-front h3 {
     font-size: 1.5rem;
