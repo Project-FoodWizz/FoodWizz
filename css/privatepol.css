@@ -38,8 +38,11 @@
 
 /* Hero Section */
 .privacy-hero {
-    background: var(--white);
-    padding: 3rem 0 2rem;
+    background: url('../assets/img/private.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 4rem 0 3rem;
     position: relative;
 }
 
@@ -48,11 +51,12 @@
 }
 
 .hero-title {
+    margin-top: 20px;
     font-size: 3rem;
     font-weight: 700;
-    color: var(--black);
-    margin-bottom: 1rem;
+    color: var(--white);
     font-family: var(--font-secondary);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .hero-decoration {
