@@ -1,5 +1,4 @@
-
-/* Variables globales */
+/* Global variables */
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
@@ -66,7 +65,7 @@ img {
     margin: 0 auto;
 }
 
-/*Barra de navegación*/
+/*Navigation bar*/
 .navbar {
     position: fixed;
     top: 0;
@@ -93,7 +92,7 @@ img {
     align-items: center;
 }
 
-/* Contenedor del logo */
+/* Logo container */
 .logo-container {
     position: relative;
 }
@@ -131,7 +130,7 @@ img {
     transform: translateY(-2px) scale(1.05);
 }
 
-/* Opciones del navbar */
+/* Navbar options */
     .nav-links {
         display: flex;
         list-style: none;
@@ -169,27 +168,27 @@ img {
 }
 
 
-/* Hover en links normales */
+/* Hover on normal links */
 .nav-hover-effect {
     position: absolute;
-    bottom: 4px; /* mientras más grande, más cerca del texto (prueba con 2px o incluso 0) */
+    bottom: 4px; /* while larger, closer to the text (try 2px or even 0) */
     left: 50%; 
     transform: translateX(-50%) scaleX(0);
-    height: 3px; /* grosor de la línea */
-    width: 60%;  /* largo de la línea, ajusta según tu gusto */
-    background: #ff8000; /* naranja sólido */
+    height: 3px; /* line thickness */
+    width: 60%;  /* line length, adjust to your liking */
+    background: #ff8000; /* solid orange */
     transform-origin: center;
     transition: transform var(--transition-fast);
     z-index: 1;
 }
 
-/* Efecto al hacer hover */
+/* Effect when hovering */
 .nav-link:hover .nav-hover-effect {
     transform: translateX(-50%) scaleX(1);
 }
 
 
-/* Texto en hover (solo para login y signup) */
+/* Text in hover (only for login and signup) */
 .nav-link:hover .nav-text {
     color: var(--vibrant-orange); 
 }
@@ -204,14 +203,14 @@ img {
 
     
  .signup-btn {
-    background: var(--vibrant-orange); /* o var(--gradient-primary) si quieres gradiente */
-    color: var(--white) !important;    /* texto blanco inicial */
+    background: var(--vibrant-orange); /* or var(--gradient-primary) if you want gradient */
+    color: var(--white) !important;    /* initial white text */
     box-shadow: var(--shadow-glow);
     position: relative;
     overflow: hidden;
 }
 
-/* Mantener estilo al presionar/focus */
+/* Keep style when pressing/focus */
 .signup-btn,
 .signup-btn:focus,
 .signup-btn:active,
@@ -222,18 +221,18 @@ img {
     box-shadow: var(--shadow-glow) !important;
 }
 
-/* Hover que solo cambia el texto a blanco porque lso demás son naranjas*/
+/* Hover that only changes the text to white because the others are orange*/
 .signup-btn:hover .nav-text {
     color: #fff !important;
 }
 
-/* Hover general (glow y movimiento) */
+/* Hover general (glow and movement) */
 .signup-btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 30px rgba(221, 170, 0, 0.5);
 }
 
-/* Glow del botón */
+/* Glow of the button */
 .signup-glow {
     position: absolute;
     top: -50%;
@@ -245,12 +244,12 @@ img {
     transition: transform 0.6s ease;
 }
 
-/* Animación del glow al hover */
+/* Animation of the glow when hovering */
 .signup-btn:hover .signup-glow {
     transform: rotate(45deg) translateX(100%);
 }
 
-/* Para eliminar cualquier borde naranja de links*/
+/* To remove any orange border of links*/
 .nav-link,
 .nav-link:focus,
 .nav-link:active,

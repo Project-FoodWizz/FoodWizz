@@ -4,7 +4,7 @@
 /* Global Styles */
 
 
-/* Estilos rápidos para mostrar imágenes redondas */
+/* Quick styles to show round images */
 .chatbot-logo, .bot-avatar {
     border-radius: 50%;
     object-fit: cover;
@@ -17,7 +17,7 @@
     right: 30px;
     width: 60px;
     height: 60px;
-    background: #ff8000; /* Color naranja para el botón */
+    background: #ff8000; /* Orange color for the button */
     color: white;
     border: none;
     border-radius: 50%;
@@ -75,7 +75,7 @@ body.show-chatbot .chatbot-popup {
 
 /* Chat Header */
 .chat-header {
-    background: #ff8000; /* Color naranja para el encabezado */
+    background: #ff8000; /* Orange color for the header */
     padding: 16px 22px;
     display: flex;
     justify-content: space-between;
@@ -91,7 +91,7 @@ body.show-chatbot .chatbot-popup {
 
 .header-info .chatbot-logo {
     background-image: url('../assets/logos/logo_F.png');
-    fill: #ff8000; /* Color naranja para el logo */
+    fill: #ff8000; /* Orange color for the logo */
     padding: 6px;
     width: 38px;
     height: 38px;
@@ -126,7 +126,7 @@ body.show-chatbot .chatbot-popup {
     flex-direction: column;
     gap: 16px;
     scrollbar-width: thin;
-    scrollbar-color: #ffcc80 transparent; /* Color de scrollbar */
+    scrollbar-color: #ffcc80 transparent; /* Color of scrollbar */
 }
 
 .message {
@@ -135,7 +135,7 @@ body.show-chatbot .chatbot-popup {
 }
 
 .bot-message .bot-avatar {
-    background: #ff8000; /* Color naranja para el avatar del bot */
+    background: #ff8000; /* Orange color for the bot avatar */
     fill: #fff;
     padding: 6px;
     width: 34px;
@@ -149,7 +149,7 @@ body.show-chatbot .chatbot-popup {
     line-height: 1.4;
     padding: 12px 16px;
     border-radius: 14px;
-    background: #ffe0b2; /* Fondo más claro para los mensajes del bot */
+    background: #ffe0b2; /* Light background for the bot messages */
 }
 
 .user-message {
@@ -158,7 +158,7 @@ body.show-chatbot .chatbot-popup {
 }
 
 .user-message .message-text {
-    background: #ff8000; /* Color naranja para los mensajes del usuario */
+    background: #ff8000; /* Orange color for the user messages */
     color: #fff;
     border-radius: 14px 14px 4px 14px;
 }
@@ -177,7 +177,7 @@ body.show-chatbot .chatbot-popup {
 .thinking-indicator .dot {
     height: 8px;
     width: 8px;
-    background: #ffcc80; /* Color de los puntos de pensamiento */
+    background: #ffcc80; /* Color of the thinking points */
     border-radius: 50%;
     opacity: 0.6;
     animation: dotPulse 1.4s ease-in-out infinite;
@@ -206,14 +206,14 @@ body.show-chatbot .chatbot-popup {
     display: flex;
     align-items: center;
     background: #fff;
-    border: 1px solid #ffcc80; /* Color de borde más claro */
+    border: 1px solid #ffcc80; /* Color of the lighter border */
     border-radius: 28px;
     padding: 4px 10px;
     gap: 8px;
 }
 
 .chat-form:focus-within {
-    border-color: #ffab40; /* Color de borde al enfocar */
+    border-color: #ffab40; /* Color of the border when focusing */
 }
 
 .message-input {
@@ -242,22 +242,22 @@ body.show-chatbot .chatbot-popup {
     height: 36px;
     border-radius: 50%;
     cursor: pointer;
-    color: #ff8000; /* Color de los botones de control */
+    color: #ff8000; /* Color of the control buttons */
     transition: background 0.2s ease;
 }
 
 .chat-controls button:hover {
-    background: #ffe0b2; /* Color de fondo al pasar el mouse */
+    background: #ffe0b2; /* Color of the background when hovering */
 }
 
 #send-message {
-    background: #ff8000; /* Color naranja para el botón de enviar */
+    background: #ff8000; /* Color of the send button */
     color: white;
     display: none;
 }
 
 #send-message:hover {
-    background: #ff8000; /* Color más oscuro al pasar el mouse */
+    background: #ff8000; /* Color of the send button when hovering */
 }
 
 .message-input:valid ~ .chat-controls #send-message {

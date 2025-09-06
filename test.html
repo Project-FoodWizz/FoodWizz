@@ -3,35 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Título de la página -->
+    <!-- Page title -->
     <title>FoodWIZZ - Smart Food Inventory Management</title>
-    <!-- Descripción de la página -->
+    <!-- Page description -->
     <meta name="description" content="Revolutionary food inventory management software for restaurants and food businesses. Easy inventory, maximum profits.">
-    <!-- Preconecta a Google Fonts para cargar las fuentes más rápido -->
+    <!-- Preconnect to Google Fonts to load fonts faster -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Importa las fuentes Poppins e Inter de Google Fonts -->
+    <!-- Import the Poppins and Inter fonts from Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
-    <!-- Importa Font Awesome para iconos -->
+    <!-- Import Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Enlace al archivo CSS externo -->
+    <!-- Link to external CSS file -->
     <link rel="stylesheet" href="css/home.css">
-    <!-- CSS para la sección de preguntas frecuentes -->
+    <!-- CSS for the FAQ section -->
     <link rel="stylesheet" href="css/frquestions.css">
-    <!-- Importa Material Symbols para iconos del chatbot -->
+    <!-- Import Material Symbols for chatbot icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
     <link rel="stylesheet" href="css/chatbot.css">
-    <!-- Importa el favicon -->
+    <!-- Import the favicon -->
     <link rel="shortcut icon" href="assets/logos/IconoNaranja_Transp.svg" type="image/x-icon">
 </head>
 <body>
 
-    <!-- Barra de navegación -->
+    <!-- Navigation bar -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <!-- Contenedor del logo -->
+            <!-- Logo container -->
             <div class="logo-container">
                 <div class="logo-3d">
                     <img src="assets/logos/logo_N.svg" alt="">
@@ -39,7 +39,7 @@
                 </div>
             </div>
             
-            <!-- Enlaces de navegación -->
+            <!-- Navigation links -->
             <ul class="nav-links" id="navLinks">
                 <li class="nav-item">
                     <a href="index.html" class="nav-link">
@@ -75,12 +75,12 @@
             </ul>
         </div>
     </nav>
-<!-- Puedes colocar esto dentro del <body> de tu archivo contact us -->
+<!-- You can place this inside the <body> of your contact us file -->
 
 <section class="contact-hero py-5" style="background:#fff;">
   <div class="container">
     <div class="row align-items-center">
-      <!-- Texto a la izquierda -->
+      <!-- Text to the left -->
       <div class="col-md-6 mb-4 mb-md-0">
         <h6 class="text-primary fw-bold mb-2" style="color:#e76800;">CONTACT US</h6>
         <h1 class="fw-bold mb-3" style="font-size:3rem; color:#111827; font-family: poppins;">FoodWizz is here for<br>you 24/7!</h1>
@@ -90,14 +90,14 @@
           At Foodwizz, our team is always ready to help you anytime, day or night.<br>
         </p>
       </div>
-      <!-- Imagen a la derecha -->
+      <!-- Image to the right -->
       <div class="col-md-6 text-center">
         <img src="assets/img/Img atention.jpeg" alt="Contact FoodWIZZ" class="img-fluid rounded-4 shadow" style="max-width:90%;margin-top: 55px;">
-        <!-- Usa tu propia imagen relevante aquí -->
+        <!-- Use your own relevant image here -->
       </div>
     </div>
   </div>
-          <!-- Sección de preguntas frecuentes -->
+          <!-- FAQ Section -->
     <section class="section faq-section">
         <div class="container">
             <div class="section-header">
@@ -316,11 +316,11 @@
         </section>
 
 
-    <!-- Pie de página -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <!-- Sección de información de contacto -->
+                <!-- Contact Information Section -->
                 <div class="footer-section">
                     <h3>Contact Information</h3>
                     <div class="contact-item">
@@ -341,7 +341,7 @@
                     </div>
                 </div>
 
-                <!-- Sección de redes sociales -->
+                <!-- Social Media Section -->
                 <div class="footer-section">
                     <h3>Follow Us</h3>
                     <p>Stay connected with FoodWIZZ</p>
@@ -366,7 +366,7 @@
                     <p class="social-handle">@foodwizz_507</p>
                 </div>
 
-                <!-- Sección de enlaces rápidos -->
+                <!-- Quick Links Section -->
                 <div class="footer-section">
                     <h3>Quick Links</h3>
                     <div class="footer-links">
@@ -378,7 +378,7 @@
                 </div>
             </div>
 
-            <!-- Parte inferior del pie de página -->
+            <!-- Bottom of the footer -->
             <div class="footer-bottom">
                 <div class="footer-tagline">
                     <span class="tagline-never">NEVER</span>
@@ -391,19 +391,19 @@
     </footer>
 
     <div id="chatbot-container"></div>
-    <!-- Aquí se cargará el chatbot que está en chatbot.html -->
+    <!-- This will load the chatbot that is in chatbot.html -->
     <script>
         fetch('Pages/chatbot.html')
         .then(res => res.text())
         .then(html => {
             document.getElementById('chatbot-container').innerHTML = html;
-            // Si tu JS necesita inicialización
+            // If your JS needs initialization
             if (typeof initChatbot === 'function') {
                 initChatbot();
             }
         });
     </script>
-    <!-- Enlace al archivo JavaScript externo -->
+    <!-- Link to external JavaScript file -->
     <script src="js/home.js"></script>
     <!-- Bootstrap JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

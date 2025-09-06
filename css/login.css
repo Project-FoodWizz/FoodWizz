@@ -1,4 +1,4 @@
-/* --- RESET Y CONFIGURACIÓN GENERAL --- */
+/* --- RESET AND GENERAL CONFIGURATION --- */
 * {
     margin: 0;
     padding: 0;
@@ -15,7 +15,7 @@ body {
     min-height: 100vh;
 }
 
-/* --- COLORES PRIMARIOS (NUEVO DISEÑO) --- */
+/* --- PRIMARY COLORS (NEW DESIGN) --- */
 :root {
     --primary-color: #DD7F0D;
     --secondary-color: #DDAA00;
@@ -34,7 +34,7 @@ body {
     left: 20px;
 }
 
-/* --- CONTENEDOR PRINCIPAL --- */
+/* --- MAIN CONTAINER --- */
 .container {
     position: relative;
     width: 1000px;
@@ -46,12 +46,12 @@ body {
     overflow: hidden;
 }
 
-/* --- CONTENEDORES DE FORMULARIOS --- */
+/* --- FORM CONTAINERS --- */
 .form-container {
     position: absolute;
     top: 0;
     height: 100%;
-    transition: all 0.6s ease-in-out; /* La transición clave */
+    transition: all 0.6s ease-in-out; /* The key transition */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -201,7 +201,7 @@ button.primary-btn:hover {
 }
 .bottom-link a:hover { text-decoration: underline; }
 
-/* --- PANELES DE SUPERPOSICIÓN (OVERLAY) --- */
+/* --- OVERLAY PANELS (OVERLAY) --- */
 .overlay-container {
     position: absolute;
     top: 0;
@@ -271,20 +271,20 @@ button.ghost-btn:hover {
 .overlay-left { transform: translateX(-20%); }
 .overlay-right { right: 0; transform: translateX(0); }
 
-/* --- LÓGICA DE LA ANIMACIÓN (CORREGIDA) --- */
+/* --- ANIMATION LOGIC (CORRECTED) --- */
 .container.right-panel-active .overlay-container { transform: translateX(-100%); }
 .container.right-panel-active .overlay { transform: translateX(50%); }
 .container.right-panel-active .overlay-left { transform: translateX(0); }
 .container.right-panel-active .overlay-right { transform: translateX(20%); }
 
-/* EL CAMBIO CLAVE ESTÁ AQUÍ 👇 */
+/* THE KEY CHANGE IS HERE 👇 */
 .container.right-panel-active .sign-in-container {
     transform: translateX(100%);
-    opacity: 0; /* Se desvanece al salir */
+    opacity: 0; /* It fades out when leaving */
 }
 
 .container.right-panel-active .sign-up-container {
     transform: translateX(100%);
-    opacity: 1; /* Aparece al entrar */
-    z-index: 5; /* Se pone por encima */
+    opacity: 1; /* It appears when entering */
+    z-index: 5; /* It is put on top */
 }

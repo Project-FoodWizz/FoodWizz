@@ -10,7 +10,7 @@
 
 /* FAQ Page Styles - Sección de Preguntas Frecuentes */
 
-/* Sección de Preguntas Frecuentes */
+/* Section of Frequently Asked Questions */
 
 .backpic {
   background-image: url('/assets/img/Soporte.png');
@@ -36,7 +36,7 @@
     margin-left: 630px;
 }
 
-/* Acordeón */
+/* Accordion */
 .faq-accordion {
     background: white;
     border-radius: 20px;
@@ -94,7 +94,7 @@
     line-height: 1.7;
 }
 
-/* Isotipo en botones */
+/* Icon in buttons */
 .faq-icon-small {
     width: 20px;
     height: 20px;
@@ -102,7 +102,7 @@
     filter: brightness(0) invert(1);
 }
 
-/* Imagen */
+/* Image */
 .faq-image {
     display: flex;
     align-items: center;

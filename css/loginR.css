@@ -61,7 +61,7 @@
             outline: none;
         }
         
-        /* Botón con estilo "fantasma" para el overlay */
+        /* Button with "ghost" style for the overlay */
         button.ghost {
             background-color: transparent;
             border-color: #FFFFFF;
@@ -88,7 +88,7 @@
         }
         
         
-        /* --- CONTENEDOR PRINCIPAL Y ANIMACIONES --- */
+        /* --- MAIN CONTAINER AND ANIMATIONS --- */
 
         .container {
             background-color: #fff;
@@ -96,7 +96,7 @@
             box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
                         0 10px 10px rgba(0,0,0,0.22);
             position: relative;
-            overflow: hidden; /* Clave para la animación */
+            overflow: hidden; /* Key for the animation */
             width: 768px;
             max-width: 100%;
             min-height: 480px;
@@ -109,14 +109,14 @@
             transition: all 0.6s ease-in-out;
         }
         
-        /* Contenedor de Iniciar Sesión (derecha) */
+        /* Login container (right) */
         .sign-in-container {
             left: 0;
             width: 50%;
             z-index: 2;
         }
 
-        /* Contenedor de Registro (izquierda, oculto al inicio) */
+        /* Register container (left, hidden at start) */
         .sign-up-container {
             left: 0;
             width: 50%;
@@ -124,7 +124,7 @@
             z-index: 1;
         }
 
-        /* Lógica de la animación: Mover paneles al activar */
+        /* Animation logic: Move panels when activating */
         .container.right-panel-active .sign-in-container {
             transform: translateX(100%);
         }
@@ -147,7 +147,7 @@
             }
         }
 
-        /* --- OVERLAY (PANEL DE IMAGEN ANIMADO) --- */
+        /* --- OVERLAY (ANIMATED IMAGE PANEL) --- */
 
         .overlay-container {
             position: absolute;
@@ -197,7 +197,7 @@
             transition: transform 0.6s ease-in-out;
         }
         
-        /* Panel izquierdo del overlay (se ve cuando se muestra el form de registro) */
+        /* Left panel of the overlay (visible when the register form is shown) */
         .overlay-left {
             transform: translateX(-20%);
         }
@@ -205,7 +205,7 @@
             transform: translateX(0);
         }
         
-        /* Panel derecho del overlay (se ve al inicio) */
+        /* Right panel of the overlay (visible at start) */
         .overlay-right {
             right: 0;
             transform: translateX(0);

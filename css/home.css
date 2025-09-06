@@ -1065,9 +1065,9 @@
     animation: fadeInUp 1s ease-out;
 }
 
-/* Contenedor de los testimonios */
+/* Container of the testimonials */
 .clients-say-section {
-    background-color: var(--cream-white);  /* Fondo blanco */
+    background-color: var(--cream-white);  /* White background */
     color: var(--dark-navy);
     padding: 50px 20px;
     text-align: center;
@@ -1094,42 +1094,42 @@
     width: 80%; 
     overflow: hidden;
     position: relative;
-    margin: 20px auto; /* Centra el contenedor */
+    margin: 20px auto; /* Center the container */
 }
 
 .carousel-track {
     display: flex;
-    width: fit-content; /* Permite que todas las cajas estén en una fila */
-    animation: scrollBoxes 70s linear infinite; /* Duración de la animación */
-    gap: 20px; /* Espacio entre las cajas */
+    width: fit-content; /* Allows all the boxes to be in a row */
+    animation: scrollBoxes 70s linear infinite; /* Duration of the animation */
+    gap: 20px; /* Space between the boxes */
 }
 
 .box {
     width: 250px;
     height: 250px;
-    background-color: rgba(255, 255, 255, 0.07); /* Semitransparente */
-    border: 2px solid orange; /* Borde naranja */
-    border-radius: 20px; /* Bordes redondeados */
-    box-shadow: 0 0 25px 8px rgba(255, 188, 65, 0.6); /* Glow naranja más visible y extendido */
-    flex-shrink: 0; /* Evita que las cajas se encojan */
+    background-color: rgba(255, 255, 255, 0.07); /* Semitransparent */
+    border: 2px solid orange; /* Orange border */
+    border-radius: 20px; /* Rounded borders */
+    box-shadow: 0 0 25px 8px rgba(255, 188, 65, 0.6); /* Glow orange more visible and extended */
+    flex-shrink: 0; /* Avoid the boxes to shrink */
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: white;
-    /* AJUSTE PARA MARGENES DEL TEXTO: Aumenta el padding horizontal de la caja */
-    padding: 15px 25px; /* 15px arriba/abajo, 25px izquierda/derecha */
+    /* TEXT MARGIN ADJUSTMENT: Increase the horizontal padding of the box */
+    padding: 15px 25px; /* 15px up/down, 25px left/right */
 }
 
 .box img {
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    margin-top: 15px; /* Margin superior para las imágenes */
+    margin-top: 15px; /* Margin superior for the images */
     object-fit: cover;
-    flex-shrink: 0; /* Asegura que la imagen no se encoja por flexbox */
-    flex-grow: 0; /* Asegura que la imagen no se estire por flexbox */
+    flex-shrink: 0; /* Ensure the image does not shrink by flexbox */
+    flex-grow: 0; /* Ensure the image does not stretch by flexbox */
 }
 
 .box .testimonial-text {

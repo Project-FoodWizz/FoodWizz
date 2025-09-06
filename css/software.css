@@ -9,7 +9,7 @@
   bottom: 50px;
 }
 
-/* Texto a la izquierda */
+/* Text on the left */
 .hero-text {
   max-width: 45%;
   padding-left: 60px;
@@ -26,7 +26,7 @@
     font-family: "League Spartan", sans-serif;
 }
 
-/* Círculo naranja al lado derecho */
+/* Orange circle on the right */
 .hero-circle {
   position: absolute;
   right: 0;
@@ -42,7 +42,7 @@
   overflow: visible;
 }
 
-/* Imagen dentro del círculo */
+/* Image inside the circle */
 .hero-img {
   margin-top: 350px;
   max-height: 80%;
@@ -71,7 +71,7 @@
 .banner {
   margin-left: 45px;
 }
-/* Caja de texto */
+/* Text box */
 .text-box {
   width: 300px;
   margin-bottom: 50px;
@@ -100,7 +100,7 @@
   font-size: 18px;
 }
 
-/* Imagen central */
+/* Central image */
 .main-image {
   margin-left: 60px;
   width: 450px;
@@ -122,21 +122,21 @@
   transition: opacity 0.3s ease-in-out;
 }
 
-/* Mostrar imagen según input */
+/* Show image according to input */
 #drink1:checked ~ .container .main-image .img1,
 #drink2:checked ~ .container .main-image .img2,
 #drink3:checked ~ .container .main-image .img3 {
   opacity: 1;
 }
 
-/* Mostrar texto según input */
+/* Show text according to input */
 #drink1:checked ~ .container .text-box .text1,
 #drink2:checked ~ .container .text-box .text2,
 #drink3:checked ~ .container .text-box .text3 {
   display: block;
 }
 
-/* Miniaturas */
+/* Miniatures */
 .side-images {
   display: flex;
   flex-direction: column;
@@ -166,18 +166,18 @@
   border-radius: 10px;
 }
 
-/* Ocultar inputs */
+/* Hide inputs */
 input[type="radio"] {
   display: none;
 }
 
-/* Animación suave */
+/* Smooth animation */
 @keyframes fade {
   from {opacity: 0; transform: translateY(10px);}
   to {opacity: 1; transform: translateY(0);}
 }
 
-/* Contenedor de los testimonios */
+/* Testimonials container */
 
 .section{
   padding:64px 16px 80px;
