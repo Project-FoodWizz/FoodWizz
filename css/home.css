@@ -2,6 +2,42 @@
         Home page CSS Start
  **********************************/
 
+
+  :root {
+    --lenslux-title-family: 'Jost', sans-serif;
+    --lenslux-theme-family: 'Rubik', sans-serif;
+    --lenslux-main-bg: #ffffff;
+    --lenslux-alternate-bg: #eff2ef;
+    --lenslux-alternate-bg: #ffefe1;
+    --lenslux-alternate-bg: #fbfbfb;
+    --lenslux-font-color: #747474;
+    --lenslux-title-color: #202020;
+    --lenslux-white: #ffffff;
+    --lenslux-primary-color: #ff9900;
+    --lenslux-border-color: #efefef;
+    --lenslux-input-border: #e5e5e5;
+    --lenslux-input-bg: #ffffff;
+    --lenslux-yellow: #ffaa17;
+    --lenslux-green: #53d575;
+    --lenslux-footer-bg: #121212;
+    --lenslux-copyright-bg: #0c0b0b;
+    --lenslux-placeholder: #b8bdc9;
+    --lenslux-black: #000000;
+    --lenslux-radius0: 0;
+    --lenslux-radius-comman: 6px;
+    --lenslux-radius10: 10px;
+    --lenslux-font-size: 14px;
+    --lenslux-title-size: 42px;
+    --lenslux-sub-title-size: 26px;
+    --lenslux-widgets-title-size: 22px;
+    --lenslux-shadow: 0 0 30px 0 rgb(0 0 0 / 8%);
+    --lenslux-transition: all 0.3s;
+}
+
+* {
+    outline: 0 !important;
+}
+
 /* Contenedor de la información principal */
 .carousel {
             position: relative;
@@ -929,4 +965,160 @@
     100% {
         transform: translateX(-50%);
     }
+}
+
+/*****************************************
+     Home Slider CSS
+/* Carrusel con fondo */
+.px_home_slider_wrapper {
+    background: url("../assets/img/banner-bg.jpg") no-repeat center center;
+    background-size: cover;
+    height: 100vh;   /* fondo ocupa toda la pantalla */
+    width: 100%;
+    display: flex;
+    align-items: center; /* centra verticalmente */
+}
+
+/* Cada slide (contenedor de texto + imagen) */
+.px_home_slider .item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 0 80px;
+}
+
+/* Texto a la izquierda */
+.text-content {
+    flex: 1;
+    color: #000000;
+}
+
+.text-content h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.text-content p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Imagen a la derecha */
+.image-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-content img {
+    max-width: 115%;
+    height: auto;
+}
+
+/* Swiper ajustes generales */
+.swiper {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+    display: block;
+}
+
+/* Botones Swiper */
+.swiper-button-next,
+.swiper-button-prev {
+    color: #fff;
+    font-size: 20px;
+}
+
+
+/* Search CSS Start */
+
+.search-box {
+    max-width: 580px;
+    width: 100%;
+    margin: 32px 0px 40px;
+}
+.search-bar-inner {
+    position: relative;
+    height: 60px;
+    border-radius: 10px;
+}
+.search-bar-inner input {
+    width: 100%;
+    height: 60px;
+    padding: 12px 65px 12px 20px;
+    border: none;
+    border-radius: 10px;
+    background: var(--lenslux-white);
+}
+.search-bar-inner input::-webkit-input-placeholder {
+    opacity: 80%;
+    font-weight: 400;
+}
+
+.search-bar-inner input::-moz-placeholder {
+    opacity: 80%;
+    font-weight: 400;
+}
+
+.search-bar-inner input:-ms-input-placeholder {
+    opacity: 80%;
+    font-weight: 400;
+}
+.search-bar-inner input:-moz-placeholder {
+    opacity: 80%;
+    font-weight: 400;
+}
+.search-bar-inner a {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    bottom: 5px;
+    border: none;
+    width: 50px;
+    font-size: 20px;
+    background: var(--lenslux-primary-color);
+    color: var(--lenslux-white);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lens-btn-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 20px;
+}
+
+.lens-btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    background: var(--lenslux-primary-color);
+    color: var(--lenslux-white);
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.lens-btn:hover {
+    background: var(--lenslux-primary-color-hover);
+}
+
+.lens-btn-outline {
+    background: transparent;
+    border: 2px solid var(--lenslux-primary-color);
+    color: var(--lenslux-primary-color);
+}
+
+.lens-btn-outline:hover {
+    background: var(--lenslux-primary-color);
+    color: var(--lenslux-white);
 }
