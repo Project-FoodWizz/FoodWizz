@@ -17,7 +17,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Enlace al archivo CSS externo -->
-    <link rel="stylesheet" href="/css/contact.css">
+    <link rel="stylesheet" href="/css/ContactUs.css">
     <link rel="stylesheet" href="/css/body-web.css">
         <!-- CSS para la sección de preguntas frecuentes -->
     <link rel="stylesheet" href="/css/frquestioons.css">
@@ -27,6 +27,10 @@
     <!-- Importa el favicon -->
     <link rel="shortcut icon" href="/assets/logos/IconoNaranja_Transp.svg" type="image/x-icon">
     <script src="../js/header-footer.js"></script>
+      <!-- Splash Screen -->
+  <div class="splash-screen" id="splashScreen" style="display: none;">
+    <img src="../assets/logos/logo_B.svg" alt="Foodwizz" class="splash-logo">
+  </div>
 </head>
 <body>
     <!-- Barra de navegación -->
@@ -105,106 +109,21 @@
 
     <!-- ================= MAP SECTION ================= -->
 
-  <style>
-    .contact-section {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      padding: 50px;
-    }
-
-    /* Formulario */
-    .contact-form {
-      background: white;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0px 4px 12px rgba(0,0,0,0.08);
-      flex: 2;
-    }
-
-    .contact-form h2 {
-      margin-bottom: 10px;
-    }
-
-    .contact-form p {
-      margin-bottom: 20px;
-      color: #555;
-    }
-
-    .form-row {
-      display: flex;
-      gap: 15px;
-      margin-bottom: 15px;
-    }
-
-    .contact-form input, 
-    .contact-form textarea {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      font-size: 14px;
-    }
-
-    .contact-form textarea {
-      min-height: 120px;
-      resize: none;
-    }
-
-    .contact-form button {
-      background: orange;
-      color: white;
-      border: none;
-      padding: 12px 20px;
-      border-radius: 8px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    .contact-form button:hover {
-      background: #e69500;
-    }
-
-    /* Tarjetas de departamentos */
-    .departments {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      flex: 1;
-    }
-
-    .card {
-      background: white;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0px 4px 12px rgba(0,0,0,0.08);
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      border-left: 4px solid orange;
-    }
-
-    .card img {
-      width: 40px;
-      height: 40px;
-    }
-
-    .card h3 {
-      margin: 0;
-      font-size: 18px;
-    }
-
-    .card p {
-      margin: 4px 0;
-      font-size: 14px;
-      color: #555;
-    }
-  </style>
-
-  
-    
-
-    </section>
+<section style="padding: 50px 0; background-color: #ffffff; text-align: center;">
+  <!-- MAP SECTION -->
+  <div style="max-width: 1000px; margin: auto;">
+    <div class="laptop-container">
+      <img src="../assets/img/compu.png" alt="Laptop" class="laptop-image">
+      <iframe 
+        class="map-overlay"
+        src="https://www.google.com/maps?q=Centro%20Supérate%20Ciudad%20del%20Niño,%20La%20Chorrera,%20Panamá&output=embed"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</section>
 
     <!-- =================== FOOTER ==================== -->
     <div id="footer-placeholder"></div>

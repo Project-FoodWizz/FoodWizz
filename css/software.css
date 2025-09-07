@@ -11,6 +11,7 @@
 
 /* Texto a la izquierda */
 .hero-text {
+  margin-top: 50px;
   max-width: 45%;
   padding-left: 60px;
   margin-left: 70px;
@@ -30,7 +31,7 @@
 .hero-circle {
   position: absolute;
   right: 0;
-  margin-top: -300px;
+  margin-top: -400px;
   margin-right: -500px;
   width: 1000px;
   height: 1000px;
@@ -44,10 +45,10 @@
 
 /* Imagen dentro del círculo */
 .hero-img {
-  margin-top: 350px;
-  max-height: 80%;
+  margin-top: 580px;
+  max-height: 70%;
   position: relative;
-  right: 260px;
+  right: 340px;
 }
 
 
@@ -94,11 +95,6 @@
   font-size: 1.2rem;
 }
 
-.price {
-  font-weight: bold;
-  color: #00804b;
-  font-size: 18px;
-}
 
 /* Imagen central */
 .main-image {
@@ -115,7 +111,8 @@
 }
 
 .main-image img {
-  max-width: 250px;
+  margin-top: -70px;
+  height: 380px;
   border-radius: 20px;
   position: absolute;
   opacity: 0;
@@ -144,7 +141,7 @@
 }
 
 .circle {
-  margin-top: 90px;
+  margin-top: 50px;
   width: 120px;
   height: 120px;
   border-radius: 50%;
@@ -184,7 +181,7 @@ input[type="radio"] {
 }
 .container{
   max-width:1100px;
-  margin:0 auto;
+  margin-top:50px;
 }
 .testimonials-container{
   max-width:1100px;
