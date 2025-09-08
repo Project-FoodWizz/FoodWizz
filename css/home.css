@@ -3,39 +3,35 @@
  **********************************/
 
 
-  :root {
-    --lenslux-title-family: 'Jost', sans-serif;
-    --lenslux-theme-family: 'Rubik', sans-serif;
-    --lenslux-main-bg: #ffffff;
-    --lenslux-alternate-bg: #eff2ef;
-    --lenslux-alternate-bg: #ffefe1;
-    --lenslux-alternate-bg: #fbfbfb;
-    --lenslux-font-color: #747474;
-    --lenslux-title-color: #202020;
-    --lenslux-white: #ffffff;
-    --lenslux-primary-color: #ff9900;
-    --lenslux-border-color: #efefef;
-    --lenslux-input-border: #e5e5e5;
-    --lenslux-input-bg: #ffffff;
-    --lenslux-yellow: #ffaa17;
-    --lenslux-green: #53d575;
-    --lenslux-footer-bg: #121212;
-    --lenslux-copyright-bg: #0c0b0b;
-    --lenslux-placeholder: #b8bdc9;
-    --lenslux-black: #000000;
-    --lenslux-radius0: 0;
-    --lenslux-radius-comman: 6px;
-    --lenslux-radius10: 10px;
-    --lenslux-font-size: 14px;
-    --lenslux-title-size: 42px;
-    --lenslux-sub-title-size: 26px;
-    --lenslux-widgets-title-size: 22px;
-    --lenslux-shadow: 0 0 30px 0 rgb(0 0 0 / 8%);
-    --lenslux-transition: all 0.3s;
-}
-
-* {
-    outline: 0 !important;
+:root {
+    --foodwiz-title-family: 'Jost', sans-serif;
+    --foodwiz-theme-family: 'Rubik', sans-serif;
+    --foodwiz-main-bg: #ffffff;
+    --foodwiz-alternate-bg: #eff2ef;
+    --foodwiz-alternate-bg: #ffefe1;
+    --foodwiz-alternate-bg: #fbfbfb;
+    --foodwiz-font-color: #747474;
+    --foodwiz-title-color: #202020;
+    --foodwiz-white: #ffffff;
+    --foodwiz-primary-color: #ff9900;
+    --foodwiz-border-color: #efefef;
+    --foodwiz-input-border: #e5e5e5;
+    --foodwiz-input-bg: #ffffff;
+    --foodwiz-yellow: #ffaa17;
+    --foodwiz-green: #53d575;
+    --foodwiz-footer-bg: #121212;
+    --foodwiz-copyright-bg: #0c0b0b;
+    --foodwiz-placeholder: #b8bdc9;
+    --foodwiz-black: #000000;
+    --foodwiz-radius0: 0;
+    --foodwiz-radius-comman: 6px;
+    --foodwiz-radius10: 10px;
+    --foodwiz-font-size: 14px;
+    --foodwiz-title-size: 42px;
+    --foodwiz-sub-title-size: 26px;
+    --foodwiz-widgets-title-size: 22px;
+    --foodwiz-shadow: 0 0 30px 0 rgb(0 0 0 / 8%);
+    --foodwiz-transition: all 0.3s;
 }
 
 /* Contenedor de la información principal */
@@ -111,7 +107,6 @@
             padding: 22px 35px;
             box-shadow: 0 4px 16px rgba(0,0,0,0.08);
             cursor: pointer;
-            font-family: 'Montserrat', sans-serif;
             transition: background 0.2s;
         }
 
@@ -166,18 +161,16 @@
     padding: var(--container-padding);
 }
 
-.section-header {
-    text-align: left;
-}
+
 
 .section-title {
     color: #000000;
-    font-size: 60px;
-    font-weight: 900;
-    margin-bottom: -5px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1%;
     position: relative;
+    text-align: center;
     display: inline-block;
-    font-family: poppins;
 }
 
 .section-subtitle {
@@ -205,7 +198,7 @@
 
 .feature-card {
     background: var(--white);
-    border-radius: 25px;
+    border-radius: 1.5%;
     padding: 2rem 1.5rem;
     text-align: center;
     box-shadow: var(--shadow-soft);
@@ -298,7 +291,7 @@
 
 
 .how-we-help {
-    background: radial-gradient(circle at center, black, #ff8000 750%);
+    background: black;
     color: var(--white);
 }
 /* Asegurar que el título y subtítulo estén centrados */
@@ -322,7 +315,7 @@
 .help-card {
     position: relative;
     padding: 2rem 1.5rem;
-    border-radius: 25px;
+    border-radius: 1.5%;
     text-align: center;
     transition: all var(--transition-medium);
     cursor: pointer;
@@ -1063,7 +1056,7 @@
     padding: 12px 65px 12px 20px;
     border: none;
     border-radius: 10px;
-    background: var(--lenslux-white);
+    background: var(--foodwiz-white);
 }
 .search-bar-inner input::-webkit-input-placeholder {
     opacity: 80%;
@@ -1091,8 +1084,8 @@
     border: none;
     width: 50px;
     font-size: 20px;
-    background: var(--lenslux-primary-color);
-    color: var(--lenslux-white);
+    background: var(--foodwiz-primary-color);
+    color: var(--foodwiz-white);
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -1109,23 +1102,23 @@
     padding: 12px 24px;
     border: none;
     border-radius: 10px;
-    background: var(--lenslux-primary-color);
-    color: var(--lenslux-white);
+    background: var(--foodwiz-primary-color);
+    color: var(--foodwiz-white);
     text-decoration: none;
     transition: background 0.3s;
 }
 
 .lens-btn:hover {
-    background: var(--lenslux-primary-color-hover);
+    background: var(--foodwiz-primary-color-hover);
 }
 
 .lens-btn-outline {
     background: transparent;
-    border: 2px solid var(--lenslux-primary-color);
-    color: var(--lenslux-primary-color);
+    border: 2px solid var(--foodwiz-primary-color);
+    color: var(--foodwiz-primary-color);
 }
 
 .lens-btn-outline:hover {
-    background: var(--lenslux-primary-color);
-    color: var(--lenslux-white);
+    background: var(--foodwiz-primary-color);
+    color: var(--foodwiz-white);
 }
