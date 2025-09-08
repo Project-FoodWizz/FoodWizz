@@ -42,16 +42,16 @@ body {
 }
 
 .laptop-image {
-  width: 100%;
+  width: 150%;
   display: block;
-  margin-left: ;
+  margin-left: -150px;
 }
 
 .map-overlay {
   position: absolute;
   top: 16%;   /* Ajusta según el diseño de la laptop */
-  left: 39%;  /* Ajusta según el diseño de la laptop */
-  width: 52%; /* Ajusta según el tamaño de la pantalla */
+  left: 41%;  /* Ajusta según el diseño de la laptop */
+  width: 76%; /* Ajusta según el tamaño de la pantalla */
   height: 65%;
   border: none;
   border-radius: 10px;
