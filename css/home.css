@@ -2,6 +2,38 @@
         Home page CSS Start
  **********************************/
 
+
+:root {
+    --foodwiz-title-family: 'Jost', sans-serif;
+    --foodwiz-theme-family: 'Rubik', sans-serif;
+    --foodwiz-main-bg: #ffffff;
+    --foodwiz-alternate-bg: #eff2ef;
+    --foodwiz-alternate-bg: #ffefe1;
+    --foodwiz-alternate-bg: #fbfbfb;
+    --foodwiz-font-color: #747474;
+    --foodwiz-title-color: #202020;
+    --foodwiz-white: #ffffff;
+    --foodwiz-primary-color: #ff9900;
+    --foodwiz-border-color: #efefef;
+    --foodwiz-input-border: #e5e5e5;
+    --foodwiz-input-bg: #ffffff;
+    --foodwiz-yellow: #ffaa17;
+    --foodwiz-green: #53d575;
+    --foodwiz-footer-bg: #121212;
+    --foodwiz-copyright-bg: #0c0b0b;
+    --foodwiz-placeholder: #b8bdc9;
+    --foodwiz-black: #000000;
+    --foodwiz-radius0: 0;
+    --foodwiz-radius-comman: 6px;
+    --foodwiz-radius10: 10px;
+    --foodwiz-font-size: 14px;
+    --foodwiz-title-size: 42px;
+    --foodwiz-sub-title-size: 26px;
+    --foodwiz-widgets-title-size: 22px;
+    --foodwiz-shadow: 0 0 30px 0 rgb(0 0 0 / 8%);
+    --foodwiz-transition: all 0.3s;
+}
+
 /* Contenedor de la información principal */
 .carousel {
             position: relative;
@@ -26,7 +58,7 @@
             align-items: center; 
             justify-content: space-between; 
             min-height: 100vh; 
-            transform: translateX(80px);
+            padding: 40px 60px;
         }
         .carrito-img {
             max-width: 100%;   
@@ -75,7 +107,6 @@
             padding: 22px 35px;
             box-shadow: 0 4px 16px rgba(0,0,0,0.08);
             cursor: pointer;
-            font-family: 'Montserrat', sans-serif;
             transition: background 0.2s;
         }
 
@@ -98,6 +129,13 @@
             justify-content: center;
             overflow: visible;
             z-index: -1;
+        }
+        .px_home_slider_wrapper {
+                background-image: url("assets/img/banner-bg.jpg"); /* tu imagen de fondo */
+                background-size: cover;       /* ajusta la imagen para cubrir todo */
+                background-position: center;  /* centra la imagen */
+                background-attachment: fixed; /* hace que quede fija al hacer scroll */
+                background-repeat: no-repeat; /* evita que se repita */
         }
 
 
@@ -123,18 +161,16 @@
     padding: var(--container-padding);
 }
 
-.section-header {
-    text-align: left;
-}
+
 
 .section-title {
     color: #000000;
-    font-size: 60px;
-    font-weight: 900;
-    margin-bottom: -5px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1%;
     position: relative;
+    text-align: center;
     display: inline-block;
-    font-family: poppins;
 }
 
 .section-subtitle {
@@ -162,7 +198,7 @@
 
 .feature-card {
     background: var(--white);
-    border-radius: 25px;
+    border-radius: 1.5%;
     padding: 2rem 1.5rem;
     text-align: center;
     box-shadow: var(--shadow-soft);
@@ -255,7 +291,7 @@
 
 
 .how-we-help {
-    background: radial-gradient(circle at center, black, #ff8000 750%);
+    background: black;
     color: var(--white);
 }
 /* Asegurar que el título y subtítulo estén centrados */
@@ -279,7 +315,7 @@
 .help-card {
     position: relative;
     padding: 2rem 1.5rem;
-    border-radius: 25px;
+    border-radius: 1.5%;
     text-align: center;
     transition: all var(--transition-medium);
     cursor: pointer;
@@ -929,4 +965,160 @@
     100% {
         transform: translateX(-50%);
     }
+}
+
+/*****************************************
+     Home Slider CSS
+/* Carrusel con fondo */
+.px_home_slider_wrapper {
+    background: url("../assets/img/banner-bg.jpg") no-repeat center center;
+    background-size: cover;
+    height: 100vh;   /* fondo ocupa toda la pantalla */
+    width: 100%;
+    display: flex;
+    align-items: center; /* centra verticalmente */
+}
+
+/* Cada slide (contenedor de texto + imagen) */
+.px_home_slider .item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 0 80px;
+}
+
+/* Texto a la izquierda */
+.text-content {
+    flex: 1;
+    color: #000000;
+}
+
+.text-content h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.text-content p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Imagen a la derecha */
+.image-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-content img {
+    max-width: 115%;
+    height: auto;
+}
+
+/* Swiper ajustes generales */
+.swiper {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+    display: block;
+}
+
+/* Botones Swiper */
+.swiper-button-next,
+.swiper-button-prev {
+    color: #fff;
+    font-size: 20px;
+}
+
+
+/* Search CSS Start */
+
+.search-box {
+    max-width: 580px;
+    width: 100%;
+    margin: 32px 0px 40px;
+}
+.search-bar-inner {
+    position: relative;
+    height: 60px;
+    border-radius: 10px;
+}
+.search-bar-inner input {
+    width: 100%;
+    height: 60px;
+    padding: 12px 65px 12px 20px;
+    border: none;
+    border-radius: 10px;
+    background: var(--foodwiz-white);
+}
+.search-bar-inner input::-webkit-input-placeholder {
+    opacity: 80%;
+    font-weight: 400;
+}
+
+.search-bar-inner input::-moz-placeholder {
+    opacity: 80%;
+    font-weight: 400;
+}
+
+.search-bar-inner input:-ms-input-placeholder {
+    opacity: 80%;
+    font-weight: 400;
+}
+.search-bar-inner input:-moz-placeholder {
+    opacity: 80%;
+    font-weight: 400;
+}
+.search-bar-inner a {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    bottom: 5px;
+    border: none;
+    width: 50px;
+    font-size: 20px;
+    background: var(--foodwiz-primary-color);
+    color: var(--foodwiz-white);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lens-btn-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 20px;
+}
+
+.lens-btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    background: var(--foodwiz-primary-color);
+    color: var(--foodwiz-white);
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.lens-btn:hover {
+    background: var(--foodwiz-primary-color-hover);
+}
+
+.lens-btn-outline {
+    background: transparent;
+    border: 2px solid var(--foodwiz-primary-color);
+    color: var(--foodwiz-primary-color);
+}
+
+.lens-btn-outline:hover {
+    background: var(--foodwiz-primary-color);
+    color: var(--foodwiz-white);
 }
