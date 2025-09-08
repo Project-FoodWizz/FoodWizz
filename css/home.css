@@ -58,7 +58,7 @@
             align-items: center; 
             justify-content: space-between; 
             min-height: 100vh; 
-            transform: translateX(80px);
+            padding: 40px 60px;
         }
         .carrito-img {
             max-width: 100%;   
