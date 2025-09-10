@@ -2,6 +2,38 @@
         Home page CSS Start
  **********************************/
 
+
+:root {
+    --foodwiz-title-family: 'Jost', sans-serif;
+    --foodwiz-theme-family: 'Rubik', sans-serif;
+    --foodwiz-main-bg: #ffffff;
+    --foodwiz-alternate-bg: #eff2ef;
+    --foodwiz-alternate-bg: #ffefe1;
+    --foodwiz-alternate-bg: #fbfbfb;
+    --foodwiz-font-color: #747474;
+    --foodwiz-title-color: #202020;
+    --foodwiz-white: #ffffff;
+    --foodwiz-primary-color: #ff9900;
+    --foodwiz-border-color: #efefef;
+    --foodwiz-input-border: #e5e5e5;
+    --foodwiz-input-bg: #ffffff;
+    --foodwiz-yellow: #ffaa17;
+    --foodwiz-green: #53d575;
+    --foodwiz-footer-bg: #121212;
+    --foodwiz-copyright-bg: #0c0b0b;
+    --foodwiz-placeholder: #b8bdc9;
+    --foodwiz-black: #000000;
+    --foodwiz-radius0: 0;
+    --foodwiz-radius-comman: 6px;
+    --foodwiz-radius10: 10px;
+    --foodwiz-font-size: 14px;
+    --foodwiz-title-size: 42px;
+    --foodwiz-sub-title-size: 26px;
+    --foodwiz-widgets-title-size: 22px;
+    --foodwiz-shadow: 0 0 30px 0 rgb(0 0 0 / 8%);
+    --foodwiz-transition: all 0.3s;
+}
+
 /* Contenedor de la información principal */
 .carousel {
             position: relative;
@@ -28,6 +60,22 @@
             min-height: 100vh; 
             padding: 40px 60px;
         }
+        .carrito-img {
+            max-width: 100%;   
+            border-radius: 0;
+            box-shadow: none;
+            position: relative; 
+        }
+
+        .carousel-content2 {
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between; 
+            min-height: 100vh; 
+            transform: translateX(0px);
+        
+        }
+
         .carousel-btn{
             height: 5%;
             border-radius: 100% !important;
@@ -59,7 +107,6 @@
             padding: 22px 35px;
             box-shadow: 0 4px 16px rgba(0,0,0,0.08);
             cursor: pointer;
-            font-family: 'Montserrat', sans-serif;
             transition: background 0.2s;
         }
 
@@ -69,6 +116,28 @@
                 0 4px 24px rgba(0,0,0,0.12),
                 
         }
+
+        .carrusel-circle1{
+            position: absolute;
+            transform: translateX(400px);
+            width: 1000px;
+            height: 1000px;
+            background: orange;
+            border-radius: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: visible;
+            z-index: -1;
+        }
+        .px_home_slider_wrapper {
+                background-image: url("assets/img/banner-bg.jpg"); /* tu imagen de fondo */
+                background-size: cover;       /* ajusta la imagen para cubrir todo */
+                background-position: center;  /* centra la imagen */
+                background-attachment: fixed; /* hace que quede fija al hacer scroll */
+                background-repeat: no-repeat; /* evita que se repita */
+        }
+
 
 .hero {
     min-height: 100vh;
@@ -92,18 +161,16 @@
     padding: var(--container-padding);
 }
 
-.section-header {
-    text-align: left;
-}
+
 
 .section-title {
     color: #000000;
-    font-size: 60px;
-    font-weight: 900;
-    margin-bottom: -5px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1%;
     position: relative;
+    text-align: center;
     display: inline-block;
-    font-family: poppins;
 }
 
 .section-subtitle {
@@ -131,7 +198,7 @@
 
 .feature-card {
     background: var(--white);
-    border-radius: 25px;
+    border-radius: 1.5%;
     padding: 2rem 1.5rem;
     text-align: center;
     box-shadow: var(--shadow-soft);
@@ -224,7 +291,7 @@
 
 
 .how-we-help {
-    background: radial-gradient(circle at center, black, #ff8000 750%);
+    background: black;
     color: var(--white);
 }
 /* Asegurar que el título y subtítulo estén centrados */
@@ -248,7 +315,7 @@
 .help-card {
     position: relative;
     padding: 2rem 1.5rem;
-    border-radius: 25px;
+    border-radius: 1.5%;
     text-align: center;
     transition: all var(--transition-medium);
     cursor: pointer;
@@ -410,40 +477,6 @@
     }
 }
 
-.software-section .section-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    justify-content: center; 
-    margin-bottom: 3rem;
-    text-align: center; 
-}
-
-.software-section .section-header h2,
-.software-section .section-header p {
-    color: #ffffff !important; 
-    max-width: 800px;
-    text-align: center;
-}
-.software-section {
-    background: radial-gradient(circle at center, black, #ff8000 750%);
-    color: var(--white);
-}
-
-.software-features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 40px;
-    margin-top: 3rem;
-}
-
-.software-card {
-    height: 300px;
-    perspective: 1000px;
-    cursor: pointer;
-}
-
-
 .card-front {
     position: absolute;
     width: 100%;
@@ -462,20 +495,7 @@
     background-color: #FF7F0D;
 }
 
-.software-features{ /*luci estuvo aqui*/
-    height: 300px;
-}
 
-.software-icon {
-    font-size: 4rem;
-    color: var(--white);
-    margin-bottom: 1.5rem;
-    transition: all var(--transition-fast);
-}
-
-.software-card:hover .software-icon {
-    transform: scale(1.2) rotateZ(360deg);
-}
 
 .card-front h3 {
     font-size: 1.5rem;
@@ -637,214 +657,6 @@
 .plan-button:active .button-ripple {
     width: 300px;
     height: 300px;
-}
-
-
-.faq-section {
-    background: linear-gradient(135deg, var(--olive-green) 0%, var(--teal-blue) 100%);
-    color: var(--white);
-}
-
-.faq-container {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.faq-item {
-    background: rgba(254, 250, 224, 0.1);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(254, 250, 224, 0.2);
-    border-radius: 20px;
-    margin-bottom: 1.5rem;
-    overflow: hidden;
-    transition: all var(--transition-fast);
-}
-
-.faq-item:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-medium);
-}
-
-.faq-question {
-    padding: 2rem;
-    cursor: pointer;
-    font-weight: 600;
-    color: var(--cream-white);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: all var(--transition-fast);
-    font-size: 1.2rem;
-}
-
-.faq-question:hover {
-    background: rgba(221, 170, 0, 0.1);
-}
-
-.faq-icon {
-    width: 40px;
-    height: 40px;
-    background: var(--gradient-primary);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all var(--transition-fast);
-}
-
-.faq-icon i {
-    transition: transform var(--transition-fast);
-}
-
-.faq-item.active .faq-icon {
-    transform: rotate(45deg);
-}
-
-.faq-answer {
-    max-height: 0;
-    overflow: hidden;
-    transition: all var(--transition-medium);
-    padding: 0 2rem;
-}
-
-.faq-answer.active {
-    max-height: 300px;
-    padding: 0 2rem 2rem;
-}
-
-.faq-answer p {
-    color: rgba(254, 250, 224, 0.9);
-    line-height: 1.8;
-    font-size: 1.1rem;
-}
-
-
-.contact-section {
-        background: linear-gradient(1deg, #ff7f0dbf 0%, #ffffff 100%);
-}
-
-.contact-content {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.contact-form {
-    background: var(--white);
-    border-radius: 25px;
-    padding: 3rem;
-    box-shadow: var(--shadow-soft);
-    border: 1px solid rgba(221, 170, 0, 0.1);
-    animation: formFloat 6s ease-in-out infinite;
-}
-
-.floating-form:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--shadow-strong);
-}
-
-.form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    margin-bottom: 2rem;
-}
-
-.form-group {
-    position: relative;
-    margin-bottom: 2rem;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 0.8rem;
-    font-weight: 600;
-    color: var(--dark-navy);
-    font-size: 1.1rem;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 1.2rem;
-    border: 2px solid #e2e8f0;
-    border-radius: 15px;
-    font-size: 1.1rem;
-    transition: all var(--transition-fast);
-    background: var(--cream-white);
-    position: relative;
-    z-index: 2;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--golden-yellow);
-    transform: translateY(-2px);
-}
-
-.input-glow {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: var(--gradient-glow);
-    border-radius: 15px;
-    opacity: 0;
-    transition: opacity var(--transition-fast);
-    z-index: 1;
-}
-
-.form-group input:focus + .input-glow,
-.form-group textarea:focus + .input-glow {
-    opacity: 1;
-}
-
-.submit-button {
-    width: 100%;
-    padding: 1.5rem;
-    background: var(--gradient-primary);
-    color: var(--white);
-    border: none;
-    border-radius: 50px;
-    font-weight: 700;
-    font-size: 1.3rem;
-    cursor: pointer;
-    transition: all var(--transition-fast);
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-}
-
-.submit-button:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-glow);
-}
-
-.submit-glow {
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-    transform: rotate(45deg) translateX(-100%);
-    transition: transform 0.8s ease;
-}
-
-.submit-button:hover .submit-glow {
-    transform: rotate(45deg) translateX(100%);
-}
-
-.contact-note {
-    text-align: center;
-    margin-top: 2rem;
-    color: var(--gray-dark);
-    font-style: italic;
-    font-size: 1.1rem;
 }
 
 @keyframes formFloat {
@@ -1153,4 +965,160 @@
     100% {
         transform: translateX(-50%);
     }
+}
+
+/*****************************************
+     Home Slider CSS
+/* Carrusel con fondo */
+.px_home_slider_wrapper {
+    background: url("../assets/img/banner-bg.jpg") no-repeat center center;
+    background-size: cover;
+    height: 100vh;   /* fondo ocupa toda la pantalla */
+    width: 100%;
+    display: flex;
+    align-items: center; /* centra verticalmente */
+}
+
+/* Cada slide (contenedor de texto + imagen) */
+.px_home_slider .item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 0 80px;
+}
+
+/* Texto a la izquierda */
+.text-content {
+    flex: 1;
+    color: #000000;
+}
+
+.text-content h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.text-content p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Imagen a la derecha */
+.image-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-content img {
+    max-width: 115%;
+    height: auto;
+}
+
+/* Swiper ajustes generales */
+.swiper {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+    display: block;
+}
+
+/* Botones Swiper */
+.swiper-button-next,
+.swiper-button-prev {
+    color: #fff;
+    font-size: 20px;
+}
+
+
+/* Search CSS Start */
+
+.search-box {
+    max-width: 580px;
+    width: 100%;
+    margin: 32px 0px 40px;
+}
+.search-bar-inner {
+    position: relative;
+    height: 60px;
+    border-radius: 10px;
+}
+.search-bar-inner input {
+    width: 100%;
+    height: 60px;
+    padding: 12px 65px 12px 20px;
+    border: none;
+    border-radius: 10px;
+    background: var(--foodwiz-white);
+}
+.search-bar-inner input::-webkit-input-placeholder {
+    opacity: 80%;
+    font-weight: 400;
+}
+
+.search-bar-inner input::-moz-placeholder {
+    opacity: 80%;
+    font-weight: 400;
+}
+
+.search-bar-inner input:-ms-input-placeholder {
+    opacity: 80%;
+    font-weight: 400;
+}
+.search-bar-inner input:-moz-placeholder {
+    opacity: 80%;
+    font-weight: 400;
+}
+.search-bar-inner a {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    bottom: 5px;
+    border: none;
+    width: 50px;
+    font-size: 20px;
+    background: var(--foodwiz-primary-color);
+    color: var(--foodwiz-white);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lens-btn-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 20px;
+}
+
+.lens-btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    background: var(--foodwiz-primary-color);
+    color: var(--foodwiz-white);
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.lens-btn:hover {
+    background: var(--foodwiz-primary-color-hover);
+}
+
+.lens-btn-outline {
+    background: transparent;
+    border: 2px solid var(--foodwiz-primary-color);
+    color: var(--foodwiz-primary-color);
+}
+
+.lens-btn-outline:hover {
+    background: var(--foodwiz-primary-color);
+    color: var(--foodwiz-white);
 }

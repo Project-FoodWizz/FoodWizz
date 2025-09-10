@@ -11,26 +11,34 @@
 
 /* Text on the left */
 .hero-text {
+  margin-top: 50px;
   max-width: 45%;
   padding-left: 60px;
   margin-left: 70px;
 }
 
 .hero-text h1 {
-    color: #000000;
-    font-size: 60px;
-    font-weight: 800;
+    color: #181818;
+    font-size: 48px;
+    font-weight: 700;
     margin-top: 50px;
     position: relative;
     display: inline-block;
-    font-family: "League Spartan", sans-serif;
+    font-family: 'Jost', sans-serif;
+
+}
+.hero-subtitle-software {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  color: #242424;
+  margin-top: 5px;
 }
 
 /* Orange circle on the right */
 .hero-circle {
   position: absolute;
   right: 0;
-  margin-top: -300px;
+  margin-top: -400px;
   margin-right: -500px;
   width: 1000px;
   height: 1000px;
@@ -44,10 +52,10 @@
 
 /* Image inside the circle */
 .hero-img {
-  margin-top: 350px;
-  max-height: 80%;
+  margin-top: 560px;
+  max-height: 90%;
   position: relative;
-  right: 260px;
+  right: 340px;
 }
 
 
@@ -94,11 +102,6 @@
   font-size: 1.2rem;
 }
 
-.price {
-  font-weight: bold;
-  color: #00804b;
-  font-size: 18px;
-}
 
 /* Central image */
 .main-image {
@@ -115,7 +118,8 @@
 }
 
 .main-image img {
-  max-width: 250px;
+  margin-top: -70px;
+  height: 380px;
   border-radius: 20px;
   position: absolute;
   opacity: 0;
@@ -143,8 +147,18 @@
   margin-left: 50px;
 }
 
+.click-here-message {
+  color: orange;
+  font-size: 1.0rem;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 800;
+}
+
 .circle {
-  margin-top: 90px;
+  margin-top: 0px;
   width: 120px;
   height: 120px;
   border-radius: 50%;
@@ -184,7 +198,7 @@ input[type="radio"] {
 }
 .container{
   max-width:1100px;
-  margin:0 auto;
+  margin-top:80px;
 }
 .testimonials-container{
   max-width:1100px;
@@ -284,4 +298,6 @@ input[type="radio"] {
 #testimonial-carousel .card .mini-logo{
   width:100px;height:100px;object-fit:contain;display:block;margin:6px auto 10px;
 }
+
+
 
