@@ -36,43 +36,40 @@
 <!-- ===================== HEADER ==================== -->
      <!-- Barra de navegación -->
     <div id="header-placeholder"></div>
-<!-- Banner de Cookies -->
-  <div id="cookie-banner">
-    <p>
-      En <strong>Foodwizz</strong> usamos cookies para mejorar tu experiencia, garantizar el correcto funcionamiento
-      del sitio y analizar el tráfico. Algunas cookies son esenciales y otras ayudan a optimizar nuestros servicios.
-    </p>
-    <div class="cookie-actions">
-      <a href="cookies.html" target="_blank">Ver más</a>
-      <button id="accept-cookies">Aceptar</button>
-    </div>
+
+<!-- ===================== COOKIES ==================== -->
+<div id="cookie-consent" class="cookie-consent">
+  <p>
+    En FoodWIZZ usamos cookies para mejorar tu experiencia, garantizar el correcto funcionamiento del sitio y analizar el tráfico.
+  </p>
+  <div class="cookie-buttons">
+    <button onclick="rejectCookies()">Rechazar todas</button>
+    <button onclick="openCookieSettings()">Configuración de cookies</button>
+    <button onclick="acceptCookies()">Aceptar todas las cookies</button>
   </div>
+</div>
+<script>
+  function acceptCookies() {
+    localStorage.setItem('cookiesAccepted', 'true');
+    document.getElementById('cookie-consent').style.display = 'none';
+  }
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const banner = document.getElementById("cookie-banner");
-      const btn = document.getElementById("accept-cookies");
-      const LS_KEY = "cookiesAccepted";
+  function rejectCookies() {
+    localStorage.setItem('cookiesAccepted', 'false');
+    document.getElementById('cookie-consent').style.display = 'none';
+  }
 
-      // Si no se ha aceptado, mostrar con animación
-      if (!localStorage.getItem(LS_KEY)) {
-        setTimeout(() => banner.classList.add("show"), 100);
-      }
+  function openCookieSettings() {
+    alert("Aquí iría tu configuración personalizada de cookies.");
+  }
 
-      // Al aceptar
-      btn.addEventListener("click", () => {
-        localStorage.setItem(LS_KEY, "true");
-        banner.classList.remove("show");
-        banner.classList.add("hide");
-
-        banner.addEventListener("transitionend", () => {
-          banner.style.display = "none";
-        }, { once: true });
-      });
-    });
-  </script>
-
-
+  window.onload = function () {
+    const consent = localStorage.getItem('cookiesAccepted');
+    if (consent === 'true' || consent === 'false') {
+      document.getElementById('cookie-consent').style.display = 'none';
+    }
+  };
+</script>
 
 <!------ Slider Start ------>
 <div class="px_home_slider_wrapper">
