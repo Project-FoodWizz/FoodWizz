@@ -38,37 +38,25 @@
     <div id="header-placeholder"></div>
 
 <!-- ===================== COOKIES ==================== -->
-<div id="cookie-consent" class="cookie-consent">
-  <p>
-    En FoodWIZZ usamos cookies para mejorar tu experiencia, garantizar el correcto funcionamiento del sitio y analizar el tráfico.
-  </p>
-  <div class="cookie-buttons">
-    <button onclick="rejectCookies()">Rechazar todas</button>
-    <button onclick="openCookieSettings()">Configuración de cookies</button>
-    <button onclick="acceptCookies()">Aceptar todas las cookies</button>
-  </div>
-</div>
+<div class="cookie-banner" id="cookieBanner">
+  <div class="cookie-content">
+    <h4>Privacy at Foodwizz</h4>
+    <p>
+      We use cookies to personalize content and ads, provide social media features, and analyze traffic. We share information with our advertising, social media, and analytics partners.
+    <a href="otr.html" style="margin-left: 10px;">Learn more</a>
+    </p>
+    <div class="cookie-buttons">
+      <button onclick="setCookiePreference('configurar')">Customize cookies</button>
+      <button onclick="setCookiePreference('rechazar')">Reject all</button>
+      <button class="accept" onclick="setCookiePreference('aceptar')">Accept all cookies</button>
 <script>
-  function acceptCookies() {
-    localStorage.setItem('cookiesAccepted', 'true');
-    document.getElementById('cookie-consent').style.display = 'none';
-  }
+  function setCookiePreference(option) {
+    // Aquí podrías guardar la preferencia en una cookie si lo deseas
+    console.log("User selected:", option);
 
-  function rejectCookies() {
-    localStorage.setItem('cookiesAccepted', 'false');
-    document.getElementById('cookie-consent').style.display = 'none';
+    // Ocultar el banner
+    document.getElementById("cookieBanner").style.display = "none";
   }
-
-  function openCookieSettings() {
-    alert("Aquí iría tu configuración personalizada de cookies.");
-  }
-
-  window.onload = function () {
-    const consent = localStorage.getItem('cookiesAccepted');
-    if (consent === 'true' || consent === 'false') {
-      document.getElementById('cookie-consent').style.display = 'none';
-    }
-  };
 </script>
 
 <!------ Slider Start ------>
