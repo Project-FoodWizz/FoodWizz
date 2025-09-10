@@ -32,7 +32,60 @@
 </head>
 <body>
 <!-- ===================== HEADER ==================== -->
-<div id="header-placeholder"></div>
+     <!-- Barra de navegación -->
+    <div id="header-placeholder"></div>
+<!-- Banner de Cookies -->
+<div id="cookie-banner" style="
+  position: fixed; 
+  bottom: 0; 
+  left: 0; 
+  right: 0; 
+  background: #222; 
+  color: #fff; 
+  padding: 20px; 
+  text-align: center; 
+  font-size: 15px; 
+  z-index: 9999; 
+  display: none; 
+  box-shadow: 0 -3px 6px rgba(0,0,0,0.3);
+">
+  <p style="max-width: 800px; margin: 0 auto 15px auto; line-height: 1.6;">
+    En <strong>Foodwizz</strong> utilizamos cookies para garantizar el correcto funcionamiento del sitio, 
+    mejorar tu experiencia de navegación y analizar el tráfico.  
+    Algunas cookies son esenciales, otras nos ayudan a optimizar nuestros servicios.
+  </p>
+  <div>
+    <a href="cookies.html" style="color: #00bfff; margin-right: 15px; text-decoration: underline;">
+      Ver más
+    </a>
+    <button id="accept-cookies" style="
+      padding: 8px 16px; 
+      background: #00bfff; 
+      color: #fff; 
+      border: none; 
+      border-radius: 5px; 
+      cursor: pointer; 
+      font-weight: bold;
+    ">
+      Aceptar
+    </button>
+  </div>
+</div>
+
+<script>
+  // Mostrar banner si aún no se aceptan cookies
+  if (!localStorage.getItem("cookiesAccepted")) {
+    document.getElementById("cookie-banner").style.display = "block";
+  }
+
+  // Guardar aceptación
+  document.getElementById("accept-cookies").addEventListener("click", function() {
+    localStorage.setItem("cookiesAccepted", "true");
+    document.getElementById("cookie-banner").style.display = "none";
+  });
+</script>
+
+
 
 <!------ Slider Start ------>
 <div class="px_home_slider_wrapper">
