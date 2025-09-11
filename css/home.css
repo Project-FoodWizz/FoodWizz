@@ -94,28 +94,6 @@
         .carousel-btn.next {
             right: 10px;
         }
-        .cta-btn {
-            position: absolute;
-            bottom: 5.7em;
-            right: 280px;
-            background: #ff8000;
-            color: #fff;
-            font-size: 22px;
-            font-weight: 600;
-            border: none;
-            border-radius: 25px;
-            padding: 22px 35px;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-            cursor: pointer;
-            transition: background 0.2s;
-        }
-
-        .cta-btn:hover {
-            
-            box-shadow:
-                0 4px 24px rgba(0,0,0,0.12),
-                
-        }
 
         .carrusel-circle1{
             position: absolute;
@@ -131,7 +109,7 @@
             z-index: -1;
         }
         .px_home_slider_wrapper {
-                background-image: url("assets/img/banner-bg.jpg"); /* tu imagen de fondo */
+                background-image: url("/assets/img/banner-bg.jpg"); /* tu imagen de fondo */
                 background-size: cover;       /* ajusta la imagen para cubrir todo */
                 background-position: center;  /* centra la imagen */
                 background-attachment: fixed; /* hace que quede fija al hacer scroll */
