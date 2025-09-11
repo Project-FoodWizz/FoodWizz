@@ -16,12 +16,6 @@ var swiper = new Swiper(".mySwiper", {
 // ===================================
 // DESPLAZAMIENTO SUAVE
 // ===================================
-const navbar = document.getElementById('navbar');
-if (navbar) {
-    navbar.addEventListener('scroll', function() {
-        // tu código aquí
-    });
-}
 
 // Añade desplazamiento suave a todos los enlaces que comienzan con #
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
