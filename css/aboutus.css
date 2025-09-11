@@ -64,18 +64,22 @@ img {
 
 .header-content {
     display: flex;
-    padding: 150px 80px 0 80px;
+    padding: 180px 30px 150px 80px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/images/image.png');
 }
 
 .header-txt {
-    flex-basis: 50%;
-    padding-right: 30px;
+    flex-basis: 35%;
+    padding-right: 4px;
+    background-size: cover;
+    background-position: center bottom;
+    align-items: center;
 }
 
 .header-txt span {
     font-size: 18px;
     text-transform: capitalize;
-    color: #FF7F0D;
+    color: #FFF;
     font-weight: 600;
     margin-bottom: 15px;
     display: block;
@@ -83,21 +87,24 @@ img {
 
 .header-txt h1 {
     font-size: 70px;
-    color: #333;
-    margin-bottom: 15px;
+    color: #FF7F0D;
+    margin-bottom: 20px;
+    margin-top: 20px;
     line-height: 1;
 }
 
-.header-img {
-    flex-basis: 50%;
-    text-align: center;
-    animation: slideInRight 1s ease-out;
+.header-txt p {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 50px;
+    line-height: 1.4;
 }
 
 p {
     font-size: 18px;
-    color: #666;
+    color: #333;
     margin-bottom: 50px;
+    line-height: 1.4;
 }
 
 .btn-1 {
@@ -204,7 +211,7 @@ h2 {
 
 .about {
     padding: 80px 0;
-    background: #fff;
+    background: #FF7F0D;
 }
 
 .about-content {
