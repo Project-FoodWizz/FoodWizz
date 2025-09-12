@@ -146,26 +146,15 @@ h1 {
 
 .values-col {
     flex-basis: 31%;
-    background: #ff9900d5;
+    background: #ff9900;
     border-radius: 10px;
     margin-bottom: 5%;
     padding: 20px 12px;
     box-sizing: border-box;
-    transition: 0.5s;
-}
-
-.values-col:hover{
-    box-shadow: 0 0 20px 0px rgb(255, 127, 13);
-}
-
-h3 {
-    text-align: center;
-    font-weight: 600;
-    margin: 10px 0;
 }
 
 .values-col p{
-    color: #222222;
+    color: #333;
     font-size: 18px;
     font-weight: 100;
     line-height: 22px;
