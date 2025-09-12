@@ -102,11 +102,9 @@ img {
 
 p {
     font-size: 18px;
-    color: #333333;
+    color: #333;
+    margin-bottom: 50px;
     line-height: 1.4;
-    font-weight: 300;
-    line-height: 22px;
-    padding: 10px;
 }
 
 .btn-1 {
@@ -135,29 +133,7 @@ p {
 
 h1 {
     font-size: 36px;
-    font-weight: 600;
-}
-
-.row {
-    margin-top: 5%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.values-col {
-    flex-basis: 31%;
-    background: #ff9900;
-    border-radius: 10px;
-    margin-bottom: 5%;
-    padding: 20px 12px;
-    box-sizing: border-box;
-}
-
-.values-col p{
-    color: #000000;
-    font-size: 18px;
-    font-weight: 100;
-    line-height: 22px;
+    fon
 }
 
 .information {

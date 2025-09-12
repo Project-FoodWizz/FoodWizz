@@ -153,13 +153,6 @@ h1 {
     box-sizing: border-box;
 }
 
-.values-col p{
-    color: #000000;
-    font-size: 18px;
-    font-weight: 100;
-    line-height: 22px;
-}
-
 .information {
     display: flex;
     padding: 50px 0 100px 0;
