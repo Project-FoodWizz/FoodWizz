@@ -41,7 +41,10 @@ h1, h2, h3, .hero-title, .section-title, .subsection-title {
   min-height: inherit;
 }
 
-.privacy-hero .hero-content { text-align: center; }
+.privacy-hero .hero-content { 
+  text-align: center;
+  margin-top: 30px;
+}
 
 .privacy-hero .hero-title {
   font-size: 54px;
@@ -49,6 +52,7 @@ h1, h2, h3, .hero-title, .section-title, .subsection-title {
   line-height: 1.05;
   color: #ffffff;
   margin: 0 0 8px;
+  margin-top: 30px;
 }
 
 /* Ocultar la línea/adorno naranja bajo el título */
