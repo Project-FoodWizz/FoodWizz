@@ -244,20 +244,17 @@ h3 {
 }
 
 .stories-col p {
-    padding: 0;
-}
-
-.stories-col h3 {
-    margin-top: 16px;
-    margin-bottom: 15px;
-    text-align: left;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 22px;
+    margin: 10px 0;
+    color: #222222;
 }
 
 .information {
     display: flex;
     padding: 50px 0 100px 0;
     align-items: center;
-    background: #FF7F0D;
 }
 
 .information-img {

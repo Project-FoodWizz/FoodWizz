@@ -260,15 +260,6 @@ h3 {
     background: #FF7F0D;
 }
 
-.information-img {
-    flex-basis: 50%;
-}
-
-.information-txt {
-    flex-basis: 50%;
-    padding-left: 50px;
-}
-
 .about {
     padding: 80px 0;
     background: #FF7F0D;

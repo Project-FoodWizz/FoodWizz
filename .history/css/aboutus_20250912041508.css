@@ -250,14 +250,13 @@ h3 {
 .stories-col h3 {
     margin-top: 16px;
     margin-bottom: 15px;
-    text-align: left;
+    text-align: ;
 }
 
 .information {
     display: flex;
     padding: 50px 0 100px 0;
     align-items: center;
-    background: #FF7F0D;
 }
 
 .information-img {
