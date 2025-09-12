@@ -172,42 +172,6 @@ h3 {
     line-height: 22px;
 }
 
-.information {
-    display: flex;
-    padding: 50px 0 100px 0;
-    align-items: center;
-}
-
-.information-img {
-    flex-basis: 50%;
-}
-
-.information-txt {
-    flex-basis: 50%;
-    padding-left: 50px;
-}
-
-.about {
-    padding: 80px 0;
-    background: #FF7F0D;
-}
-
-.about-content {
-    display: flex;
-    align-items: center;
-}
-
-.about-txt {
-    flex-basis: 50%;
-    padding-right: 80px;
-}
-
-.about-img {
-    width: 100%;
-    border-radius: 15px;
-    transition: all var(--transition-fast);
-}
-
 .whoweare {
     width: 80%;
     margin: auto;
