@@ -155,7 +155,7 @@ h1 {
 .values-col {
     flex-basis: 31%;
     background: #ff9900d5;
-    border-radius: 20px;
+    border-radius: 10px;
     margin-bottom: 5%;
     padding: 20px 12px;
     box-sizing: border-box;
@@ -195,135 +195,13 @@ h3 {
     padding-left: 50px;
 }
 
-.why-we-exist {
-    margin-bottom: 100px;
-    text-align: center;
-}
-.why-we-exist .section-subtitle {
-    max-width: 100% !important; 
-    text-align: left;        
-    margin: 0 auto;             
-}
-.mission-vision-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    margin-top: 3rem;
+.mandv {
+    width: 80%;
+    margin: auto;
+    text-align: center; 
 }
 
-.floating-card {
-    background: var(--white);
-    border-radius: 25px;
-    padding: 3rem;
-    box-shadow: var(--shadow-soft);
-    transition: all var(--transition-medium);
-    position: relative;
-    overflow: hidden;
-    border: 1px solid rgba(221, 170, 0, 0.1);
-}
-
-.floating-card:hover {
-    transform: translateY(-10px) rotateX(5deg);
-    box-shadow: var(--shadow-strong);
-}
-
-.card-header {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 2rem;
-}
-
-.card-emoji {
-    font-size: 3rem;
-    animation: emojiFloat 3s ease-in-out infinite;
-}
-
-.card-header h3 {
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--dark-navy);
-}
-
-.floating-card p {
-    color: var(--gray-dark);
-    line-height: 1.8;
-    font-size: 1.1rem;
-}
-
-.card-decoration {
-    position: absolute;
-    bottom: -50px;
-    right: -50px;
-    width: 100px;
-    height: 100px;
-    background: var(--gradient-primary);
-    border-radius: 50%;
-    opacity: 0.1;
-    transition: all var(--transition-fast);
-}
-
-.floating-card:hover .card-decoration {
-    transform: scale(1.5);
-    opacity: 0.2;
-}
-
-@keyframes emojiFloat {
-    0%, 100% {
-        transform: translateY(0px) rotate(0deg);
-    }
-    50% {
-        transform: translateY(-10px) rotate(5deg);
-    }
-}
-
-.card-front {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 25px;
-    padding: 2rem 1.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.card-front{
-    background-color: #FF7F0D;
-}
-
-.card-front h3 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: var(--cream-white);
-    text-align: justify;
-    margin: 12px;
-}
-
-.card-front p {
-    color: rgba(254, 250, 224, 0.8);
-    font-size: 1rem;
-}
-
-
-.middle-card .software-icon {
-    color: #FF7F0D; /* Naranja */
-}
-.middle-card .card-front {
-    background-color: white; /* Fondo blanco solo para la carta del medio */
-}
-
-.middle-card .card-front h3 {
-    color: #000000; /* Opcional: cambiar el color del título para que contraste */
-}
-
-.middle-card .card-front p {
-    color: #000000 !important; 
-}
+.mandv-col 
 
 .history {
     padding: 50px 180px;

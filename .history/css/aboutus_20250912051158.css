@@ -155,7 +155,7 @@ h1 {
 .values-col {
     flex-basis: 31%;
     background: #ff9900d5;
-    border-radius: 20px;
+    border-radius: 2px;
     margin-bottom: 5%;
     padding: 20px 12px;
     box-sizing: border-box;

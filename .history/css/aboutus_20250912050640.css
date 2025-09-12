@@ -155,7 +155,7 @@ h1 {
 .values-col {
     flex-basis: 31%;
     background: #ff9900d5;
-    border-radius: 20px;
+    border-radius: 10px;
     margin-bottom: 5%;
     padding: 20px 12px;
     box-sizing: border-box;
@@ -196,8 +196,7 @@ h3 {
 }
 
 .why-we-exist {
-    margin-bottom: 100px;
-    text-align: center;
+    background: linear-gradient(to bottom, #FFFFFF, #f0e7e7, #AFAAAA); 
 }
 .why-we-exist .section-subtitle {
     max-width: 100% !important; 
@@ -294,6 +293,8 @@ h3 {
 .card-front{
     background-color: #FF7F0D;
 }
+
+
 
 .card-front h3 {
     font-size: 1.5rem;
