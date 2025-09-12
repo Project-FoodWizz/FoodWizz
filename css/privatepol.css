@@ -43,7 +43,6 @@ h1, h2, h3, .hero-title, .section-title, .subsection-title {
 
 .privacy-hero .hero-content { 
   text-align: center;
-  margin-top: 30px;
 }
 
 .privacy-hero .hero-title {
@@ -52,7 +51,7 @@ h1, h2, h3, .hero-title, .section-title, .subsection-title {
   line-height: 1.05;
   color: #ffffff;
   margin: 0 0 8px;
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 /* Ocultar la línea/adorno naranja bajo el título */
