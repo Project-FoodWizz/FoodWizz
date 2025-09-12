@@ -335,9 +335,9 @@ h3 {
     align-items: center;
 }
 
-.history-txt {
-    flex-basis: 90%;
-    padding-right: 5px;
+.histoy-txt {
+    flex-basis: 50%;
+    padding-right: 90px;
 }
 
 .history-img {

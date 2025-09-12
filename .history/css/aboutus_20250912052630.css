@@ -336,8 +336,8 @@ h3 {
 }
 
 .history-txt {
-    flex-basis: 90%;
-    padding-right: 5px;
+    flex-basis: 50%;
+    padding-right: 50px;
 }
 
 .history-img {
