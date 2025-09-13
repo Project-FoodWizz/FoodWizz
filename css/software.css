@@ -24,11 +24,9 @@
     margin-top: 50px;
     position: relative;
     display: inline-block;
-    font-family: 'Jost', sans-serif;
 
 }
 .hero-subtitle-software {
-  font-family: 'Montserrat', sans-serif;
   font-size: 1.2rem;
   color: #242424;
   margin-top: 5px;
@@ -71,9 +69,7 @@
     font-weight: 830;
     margin-bottom: -5px;
     position: relative;
-    display: inline-block;
-    font-family: "League Spartan", sans-serif;
-    
+    display: inline-block;    
 }
 
 .banner {
@@ -98,7 +94,6 @@
 .text p {
   color: #000000;
   margin-bottom: 10px;
-  font-family: 'Montserrat', sans-serif;
   font-size: 1.2rem;
 }
 
@@ -153,7 +148,6 @@
   text-align: center;
   margin-top: 5px;
   margin-bottom: 20px;
-  font-family: 'League Spartan', sans-serif;
   font-weight: 800;
 }
 
@@ -206,8 +200,7 @@ input[type="radio"] {
   display:block;
 }
 .testimonials-container .section-header h2{
-  font-family: "League Spartan", sans-serif;
-  font-weight: 800;
+  font-weight: 600;
   font-size: 56px;
   line-height: 1.1;
   color: #000000;
@@ -218,9 +211,11 @@ input[type="radio"] {
 }
 .section-header h2{
   margin:0;
-  font-weight:700;
+  font-weight:800;
   font-size:28px;
+  font-family: 'League Spartan', sans-serif;
 }
+
 .section-header h2 span{color:var(--primary)}
 .underline{
   width:110px;height:4px;background:linear-gradient(90deg,var(--primary),transparent);

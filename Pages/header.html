@@ -1,13 +1,13 @@
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <!-- css del header -->
+
     <style>
         .header {
             position: fixed;
             top: 0;
             z-index: 1000;
             width: 100%;
-            padding: 20px 0;
+            padding: 1em 0;
             border-bottom: 1px solid #e0e0e0;
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(20px);
@@ -16,27 +16,20 @@
 
         .header-container {
             max-width: 100%;
-            margin: 0 1%;
+            margin: 1% 3%;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        .logo a {
-            display: flex;
-            flex-direction: column;
-            align-items: left;
-            text-decoration: none;
-        }
-
         .logo img {
-            height: 50px;
+            height: 3em;
         }
 
         .header-right {
             display: flex;
             align-items: center;
-            gap: 30px;
+            gap: 2em;
         }
 
         .navbar ul {
@@ -52,7 +45,7 @@
             text-decoration: none;
             color: #333;
             font-weight: 500;
-            font-size: 16px;
+            font-size: 1em;
             transition: color 0.3s;
         }
 
@@ -60,58 +53,106 @@
             color: #ff9900;
         }
 
-        .header-icons {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .header-icons .icon {
-            position: relative;
-            font-size: 22px;
-            color: #555;
-            transition: color 0.3s;
-        }
-
-        .header-icons .icon:hover {
-            color: #ff9900;
-        }
-
-        .cart-icon {
-            position: relative;
-        }
-
-        .cart-count {
-            position: absolute;
-            top: -8px;
-            right: -8px;
-            background-color: #ff9900;
-            color: #fff;
-            border-radius: 50%;
-            padding: 2px 6px;
-            font-size: 12px;
-        }
-
         .sign-in-btn {
             background-color: #ff9900;
             color: #fff;
-            padding: 12px 25px;
+            padding: 1rem 2rem;
             border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 14px;
+            font-size: 1em;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: background-color 0.3s;
-            margin-left: 10px;
+            order: 2px;
         }
 
         .sign-in-btn:hover {
             background-color: #e68a00;
         }
+
+        /* ========= HAMBURGER MENU ========= */
+        .menu-toggle {
+            display: none;
+            font-size: 50px;
+            cursor: pointer;
+            color: #333;
+        }
+
+        /* ========= RESPONSIVE ========= */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-wrap: nowrap;
+            }
+
+            /* ocultamos el menú en móviles */
+            .navbar {
+                display: none;
+                width: 100%;
+                background: white;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                border-top: 1px solid #e0e0e0;
+            }
+
+            .navbar.active {
+                display: block;
+                animation: fadeIn 0.3s ease-in-out;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                margin-top: 8%;
+            }
+
+            .navbar ul {
+                flex-direction: column;
+                gap: 0;
+            }
+
+            .navbar li {
+                text-align: center;
+                border-bottom: 1px solid #eee;
+            }
+
+            .navbar a {
+                display: block;
+                padding: 15px 0;
+                font-size: 2em;
+            }
+
+            /* derecha: toggle + sign in */
+            .header-right {
+                gap: 30px;
+            }
+
+            .menu-toggle {
+                display: block;
+                order: 2;
+            }
+
+            .logo img {
+                height: 5em;
+            }
+
+            .sign-in-btn {
+                padding: 20px 30px;
+                font-size: 2em;
+                order: 1; /* para que aparezca ANTES del toggle si quieres */
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
 
-<!-- Header de la página -->
+<body>
 <header class="header">
     <div class="header-container">
         <div class="logo">
@@ -119,8 +160,16 @@
                 <img src="/assets/logos/logo_N.svg" alt="FoodWizz Logo">
             </a>
         </div>
+        
         <div class="header-right">
-            <nav class="navbar">
+            
+            <!-- Botón hamburguesa -->
+            <div class="menu-toggle" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <!-- Menú de navegación -->
+            <nav class="navbar" id="navbar">
                 <ul>
                     <li><a href="/index.html">Home</a></li>
                     <li><a href="/Pages/software.html">Software</a></li>
@@ -128,7 +177,10 @@
                     <li><a href="/Pages/ContactUS.html">Contact Us</a></li>
                 </ul>
             </nav>
-            <a href="#" class="sign-in-btn">SIGN IN</a>
+            
+            <!-- Botón Sign In (también visible en móviles a la derecha) -->
+            <a href="/Pages/loginRegister.html" class="sign-in-btn">SIGN IN</a>
         </div>
     </div>
 </header>
+</body>

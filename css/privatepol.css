@@ -2,12 +2,8 @@
 
 /* Tipografías base: títulos League Spartan, contenido Montserrat */
 body {
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: #202124;
-}
-
-h1, h2, h3, .hero-title, .section-title, .subsection-title {
-  font-family: 'League Spartan', system-ui, -apple-system, sans-serif;
 }
 
 /* Breadcrumbs */
@@ -41,14 +37,17 @@ h1, h2, h3, .hero-title, .section-title, .subsection-title {
   min-height: inherit;
 }
 
-.privacy-hero .hero-content { text-align: center; }
+.privacy-hero .hero-content { 
+  text-align: center;
+}
 
 .privacy-hero .hero-title {
   font-size: 54px;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.05;
   color: #ffffff;
   margin: 0 0 8px;
+  margin-top: 50px;
 }
 
 /* Ocultar la línea/adorno naranja bajo el título */
@@ -79,14 +78,14 @@ h1, h2, h3, .hero-title, .section-title, .subsection-title {
 
 .section-title {
   font-size: 32px;
-  font-weight: 800;
+  font-weight: 600;
   color: #111827;
   margin-bottom: 8px;
 }
 
 .subsection-title {
   font-size: 22px;
-  font-weight: 700;
+  font-weight: 600;
   color: #1f2937;
   margin-top: 16px;
   margin-bottom: 8px;

@@ -309,10 +309,14 @@ body.show-emoji-picker em-emoji-picker {
 }
 
 /* Responsive Design */
-@media (max-width: 520px) {
+/* ===== Ultra Mobile (<780px) ===== */
+@media (max-width: 780px) {
     #chatbot-toggler {
         bottom: 20px;
         right: 20px;
+        z-index: 9999; /* siempre arriba */
+        width: 60px;
+        height: 60px;
     }
 
     .chatbot-popup {
@@ -322,22 +326,114 @@ body.show-emoji-picker em-emoji-picker {
         right: 0;
         border-radius: 0;
         box-shadow: none;
+        display: flex;
+        flex-direction: column;
+        z-index: 9999; /* encima de todo */
     }
 
     .chat-header {
-        padding: 12px 16px;
+        padding: 16px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        background: #ff8000;
+        color: white;
+        font-size: 32px; /* letras más grandes */
+    }
+
+    .header-info {
+        display: flex;
+        align-items: center;
+        gap: 12px;
     }
 
     .chat-body {
-        padding: 12px;
-        height: calc(100vh - 130px);
+        flex: 1; 
+        padding: 16px;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        scrollbar-width: thin;
+        scrollbar-color: #ffcc80 transparent;
+        scroll-behavior: smooth;
     }
 
     .chat-footer {
-        padding: 10px 16px;
+        padding: 12px;
+        background: #fff;
+        border-top: 1px solid #ddd;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: sticky;
+        bottom: 0;
+        z-index: 9999;
+    }
+
+    .chat-form {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
     }
 
     .message-input {
-        font-size: 0.9rem;
+        flex: 1;
+        border-radius: 24px;
+        padding: 12px 16px;
+        font-size: 32px; /* letras grandes */
+        height: 60px;
+        background: #f5f5f5;
+    }
+
+    .chat-controls {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .chat-controls button {
+        width: 60px;
+        height: 60px;
+        font-size: 32px; /* botones grandes */
+    }
+
+    #send-message {
+        width: 60px;
+        height: 60px;
+        display: block;
+        font-size: 32px;
+    }
+
+    .bot-avatar, .chatbot-logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .message-text {
+        font-size: 32px; /* texto grande */
+        max-width: 90%;
+        line-height: 1.2em;
+    }
+
+    .user-message .message-text,
+    .bot-message .message-text {
+        word-wrap: break-word;
+    }
+
+    em-emoji-picker {
+        max-width: 320px;
+        max-height: 300px;
+    }
+
+    /* Scroll siempre visible con suavidad */
+    .chat-body::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .chat-body::-webkit-scrollbar-thumb {
+        background-color: #ffcc80;
+        border-radius: 3px;
     }
 }

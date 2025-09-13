@@ -12,10 +12,16 @@
 
     <link rel="stylesheet" href="../css/login.css">
     <link rel="shortcut icon" href="../assets/logos/IconoNaranja_Transp.svg" type="image/x-icon">
+
+    <!-- Firebase conexion -->
+    <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore-compat.js"></script>
+
 </head>
 
 <body>
-    <a href="../FoodWizz.html"><img class="logoFW" src="../assets/logos/logo_N.svg" alt=""></a>
+    <a href="/index.html"><img class="logoFW" src="../assets/logos/logo_N.svg" alt=""></a>
 
     <div class="container" id="container">
         
@@ -43,9 +49,9 @@
                 <button type="submit" class="primary-btn">Sign Up</button>
                 <div class="divider">or sign up with</div>
                 <div class="social-login">
-                    <a href="#" class="social-btn"><i class="ri-facebook-circle-fill"></i></a>
+                    <a href="#" class="social-btn"><i class="ri-github-fill"></i></a>
                     <a href="#" class="social-btn"><i class="ri-google-fill"></i></a>
-                    <a href="#" class="social-btn"><i class="ri-apple-fill"></i></a>
+                    <a href="#" class="social-btn"><i class="ri-microsoft-fill"></i></a>
                 </div>
                 <p class="bottom-link">Have an account? <a href="#" id="signInLink">Sign in</a></p>
             </form>
@@ -74,9 +80,9 @@
                 <button type="submit" class="primary-btn">Sign In</button>
                 <div class="divider">or sign in with</div>
                 <div class="social-login">
-                    <a href="#" class="social-btn"><i class="ri-facebook-circle-fill"></i></a>
+                    <a href="#" class="social-btn"><i class="ri-github-fill"></i></a>
                     <a href="#" class="social-btn"><i class="ri-google-fill"></i></a>
-                    <a href="#" class="social-btn"><i class="ri-apple-fill"></i></a>
+                    <a href="#" class="social-btn"><i class="ri-microsoft-fill"></i></a>
                 </div>
                 <p class="bottom-link">No account? <a href="#" id="signUpLink">Sign up</a></p>
             </form>
@@ -98,7 +104,7 @@
         </div>
     </div>
 
-<script src="../js/login.js"></script>
+<script src="../js/login.js" type="module"></script>
 
 </body>
 </html>

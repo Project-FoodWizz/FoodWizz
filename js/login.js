@@ -43,3 +43,63 @@ document.querySelectorAll('.password-toggle').forEach(toggle => {
         }
     });
 });
+
+//=================================================================
+// ================Importar auth desde conection.js================
+//=================================================================
+
+import { auth, db } from "./Authentication/conection.js";
+
+// Form references
+const signUpForm = document.querySelector('.sign-up-container form');
+const signInForm = document.querySelector('.sign-in-container form');
+
+// --- Sign Up ---
+signUpForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const email = document.getElementById('signup-email').value;
+    const password = document.getElementById('signup-password').value;
+
+    try {
+        // Create account in Firebase Auth
+        const userCredential = await auth.createUserWithEmailAndPassword(email, password);
+        const user = userCredential.user;
+
+        // Store minimal data in Firestore (optional)
+        await db.collection("users").doc(user.uid).set({
+            email: email,
+            createdAt: new Date()
+        });
+
+        console.log("✅ User registered:", user.uid);
+        alert("Account created successfully 🚀");
+
+    } catch (error) {
+        console.error("❌ Sign Up error:", error.message);
+        alert("Sign Up failed: " + error.message);
+    }
+});
+
+// --- Sign In ---
+signInForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const email = document.getElementById('signin-email').value;
+    const password = document.getElementById('signin-password').value;
+
+    try {
+        const userCredential = await auth.signInWithEmailAndPassword(email, password);
+        console.log("✅ Signed in:", userCredential.user.uid);
+
+        alert("Welcome back 👋");
+
+        // Redirect to user dashboard
+        window.location.href = "user.html";
+
+    } catch (error) {
+        console.error("❌ Sign In error:", error.message);
+        alert("Sign In failed: " + error.message);
+    }
+});
+

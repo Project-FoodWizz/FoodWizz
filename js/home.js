@@ -1,104 +1,22 @@
 // ===================================
-// FUNCIONALIDAD DE NAVEGACIÓN
-// ===================================
-document.addEventListener('DOMContentLoaded', function() {
-    // Obtiene elementos del DOM para la navegación
-    const navbar = document.getElementById('navbar'); // Barra de navegación principal
-    const mobileMenu = document.getElementById('mobileMenu'); // Botón del menú móvil
-    const navLinks = document.getElementById('navLinks'); // Enlaces de navegación
-
-    // Alternar menú móvil al hacer clic en el botón de hamburguesa
-    mobileMenu.addEventListener('click', function() {
-        navLinks.classList.toggle('active'); // Muestra/oculta los enlaces de navegación
-        mobileMenu.classList.toggle('active'); // Cambia el icono del menú móvil
-    });
-
-    // Cierra el menú móvil al hacer clic en un enlace
-    navLinks.addEventListener('click', function(e) {
-        if (e.target.tagName === 'A') {
-            navLinks.classList.remove('active'); // Oculta los enlaces de navegación
-            mobileMenu.classList.remove('active'); // Restaura el icono del menú móvil
-        }
-    });
-
-    // Efecto de desplazamiento en la barra de navegación
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled'); // Añade clase para estilo de desplazamiento
-        } else {
-            navbar.classList.remove('scrolled'); // Elimina clase para estilo de desplazamiento
-        }
-    });
-});
-
-// ===================================
 // CARRUSEL DEL HERO
 // ===================================
-const images = document.querySelectorAll('.carousel-image');
-const imagesContainer = document.querySelector('.carousel-images');
-const prevBtn = document.querySelector('.carousel-btn.prev');
-const nextBtn = document.querySelector('.carousel-btn.next');
-let current = 0;
-const total = images.length;
-
-// Muestra la imagen con animación
-function showImage(index, animate = true) {
-    if (animate) {
-        imagesContainer.style.transition = 'transform 0.7s cubic-bezier(.77,0,.18,1)';
-    } else {
-        imagesContainer.style.transition = 'none';
-    }
-    imagesContainer.style.transform = `translateX(-${index * 100}%)`;
-}
-
-// Botón anterior
-prevBtn.addEventListener('click', () => {
-    if (current === 0) {
-        showImage(total - 1, false);
-        setTimeout(() => {
-            current = total - 2;
-            showImage(current, true);
-        }, 20);
-    } else {
-        current = (current - 1 + total) % total;
-        showImage(current);
-    }
-});
-
-// Botón siguiente
-nextBtn.addEventListener('click', () => {
-    if (current === total - 2) {
-        showImage(current + 1, true);
-        setTimeout(() => {
-            showImage(0, false);
-            current = 0;
-        }, 700);
-    } else {
-        current = (current + 1) % total;
-        showImage(current);
-    }
-});
-
-// Auto avance
-setInterval(() => {
-    if (current === total - 2) {
-        showImage(current + 1, true);
-        setTimeout(() => {
-            showImage(0, false);
-            current = 0;
-        }, 700);
-    } else {
-        current = (current + 1) % total;
-        showImage(current);
-    }
-}, 5000);
-
-// Inicializa posición
-showImage(current);
+var swiper = new Swiper(".mySwiper", {
+        loop: true,
+        autoplay: {
+            delay: 3500, // cambia de slide cada 3.5 segundos
+            disableOnInteraction: false
+        },
+        navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+        },
+    });
 
 // ===================================
 // DESPLAZAMIENTO SUAVE
 // ===================================
+
 // Añade desplazamiento suave a todos los enlaces que comienzan con #
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
