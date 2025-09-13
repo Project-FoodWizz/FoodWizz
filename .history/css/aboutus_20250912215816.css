@@ -193,12 +193,8 @@ h3 {
     font-size: 35px;
 }
 
-.values-col h3{
-    color: #fcfcfc;
-}
-
 .values-col p{
-    color: #fcfcfc;
+    color: fcfcfc#222222;
     font-size: 18px;
     font-weight: 100;
     line-height: 22px;
