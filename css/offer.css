@@ -49,17 +49,16 @@
 /* Ajustes para las imágenes lado a lado */
 .fw-banners-container {
     display: flex;
-    gap: 20px;
-    justify-content: flex-start;
-    align-items: stretch;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
     max-width: 2100px;
-    margin: 0 0 5% 120px;
-    padding: 0 40px;
+    margin: 0 auto;
 }
 
 .main-fw-banner {
     background: linear-gradient(135deg, #fefefe 0%, #f0e6d2 100%);
-    padding: 60px 0 60px 0;
+    padding: 10px 0;
     position: relative;
 }
 
@@ -203,6 +202,7 @@
 @media (min-width: 1200px) {
     .fw-container {
         max-width: 1180px;
+        margin: 5% auto;
     }
 }
 
@@ -211,7 +211,8 @@
         max-width: 1420px;
     }
     .fw-container {
-        max-width: 1420px;
+        max-width: 90%;
+        margin: 5% auto;
     }
 }
 
@@ -254,6 +255,15 @@
         margin-left: 0;
     }
     
+    .fw-container {
+        max-width: 90%;
+        margin: 5% auto;
+    }
+
+    .fw-banner-content p {
+        font-size: 32px;
+    }
+    
     .fw-banner-right {
         padding: 40px 20px 0;
     }
@@ -282,5 +292,12 @@
     
     .fw-section-title {
         padding-top: 20px;
+    }
+
+    .placeholder-elements {
+        display: flex;
+        gap: 15px;
+        margin-top: 20px;
+        justify-content: center;
     }
 }

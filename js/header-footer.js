@@ -3,8 +3,19 @@ fetch('/Pages/header.html')
     .then(response => response.text())
     .then(data => {
         document.getElementById('header-placeholder').innerHTML = data;
-    });
 
+        // Ahora sí puedes acceder a los elementos del header
+        const menuToggle = document.getElementById("menu-toggle");
+        const navbar = document.getElementById("navbar");
+
+        if (menuToggle && navbar) {
+            menuToggle.addEventListener("click", () => {
+                navbar.classList.toggle("active");
+                menuToggle.querySelector("i").classList.toggle("fa-bars");
+                menuToggle.querySelector("i").classList.toggle("fa-times");
+            });
+        }
+    });
 // Carga el footer
 fetch('/Pages/footer.html')
     .then(response => response.text())
