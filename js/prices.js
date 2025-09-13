@@ -37,37 +37,6 @@ document.addEventListener('click', function(event) {
     }
 });
 
-// Función para manejar el botón "BUY NOW"
-function handleBuyNow(planName) {
-    alert(`¡Gracias por elegir el ${planName}! Serás redirigido al proceso de pago.`);
-    // Aquí puedes agregar la lógica para redirigir al proceso de pago
-}
-
-// Agregar event listeners a todos los botones "BUY NOW"
-document.addEventListener('DOMContentLoaded', function() {
-    const buyButtons = document.querySelectorAll('.buy-btn, .buy-btn-back');
-    
-    buyButtons.forEach(button => {
-        button.addEventListener('click', function(event) {
-            event.stopPropagation(); // Prevenir que se active el flip de la tarjeta
-            
-            // Determinar el plan basado en la tarjeta padre
-            const card = this.closest('.card');
-            let planName = '';
-            
-            if (card.querySelector('.basic-card, .basic-card-back')) {
-                planName = 'Basic Plan';
-            } else if (card.querySelector('.wizz-card, .wizz-card-back')) {
-                planName = 'Wizz Plan';
-            } else if (card.querySelector('.pro-card, .pro-card-back')) {
-                planName = 'Pro Plan';
-            }
-            
-            handleBuyNow(planName);
-        });
-    });
-});
-
 // Efectos adicionales para mejorar la experiencia
 document.addEventListener('DOMContentLoaded', function() {
     // Animación de entrada para las tarjetas

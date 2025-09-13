@@ -1,9 +1,11 @@
 <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
     .pricing-section * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
         font-weight: bold;
+        font-family: 'montserrat', sans-serif;
     }
 
     .pricing-section {
@@ -46,11 +48,13 @@
         perspective: 1000px;
         cursor: pointer;
         position: relative;
+        border: none;
     }
 
     .pricing-section .featured-card {
         transform: scale(1.10);
         z-index: 10;
+        border: none;
     }
 
 
@@ -299,6 +303,7 @@
         flex-direction: column;
         gap: 50px;
         align-items: center;
+        border: none;
     }
 
     .pricing-section .card {
@@ -359,7 +364,7 @@
                         </div>
                         <h2 class="plan-name">BASIC PLAN</h2>
                         <div class="price">$155</div>
-                        <button class="buy-btn">BUY NOW</button>
+                        <button class="buy-btn">Learn More</button>
                     </div>
                     <div class="card-back basic-card-back">
                         <h3>BASIC PLAN</h3>
@@ -386,7 +391,7 @@
                             </div>
                         </div>
                         
-                        <button class="buy-btn-back">BUY NOW</button>
+                        <button type="button" class="buy-btn" onclick="window.location.href='https://buy.stripe.com/test_5kQ00k2rOg3WdNF1e43Ru02';">BUY NOW</button>
                     </div>
                 </div>
             </div>
@@ -403,7 +408,7 @@
                         </div>
                         <h2 class="plan-name">WIZZ PLAN</h2>
                         <div class="price">$290</div>
-                        <button class="buy-btn wizz-btn">BUY NOW</button>
+                        <button class="buy-btn wizz-btn">Learn More</button>
                     </div>
                     <div class="card-back wizz-card-back">
                         <h3>WIZZ PLAN</h3>
@@ -430,7 +435,7 @@
                             </div>
                         </div>
 
-                        <button class="buy-btn-back wizz-btn-back">BUY NOW</button>
+                        <button type="button" class="buy-btn" onclick="window.location.href='https://buy.stripe.com/test_5kQaEYc2o3hadNFbSI3Ru00';">BUY NOW</button>
                     </div>
                 </div>
             </div>
@@ -444,7 +449,7 @@
                         </div>
                         <h2 class="plan-name">PRO PLAN</h2>
                         <div class="price">$200</div>
-                        <button class="buy-btn">BUY NOW</button>
+                        <button class="buy-btn">Learn More</button>
                     </div>
                     <div class="card-back pro-card-back">
                         <h3>PRO PLAN</h3>
@@ -471,7 +476,9 @@
                             </div>
                         </div>
                         
-                        <button class="buy-btn-back">BUY NOW</button>
+                        <button type="button" class="buy-btn" onclick="window.location.href='https://buy.stripe.com/test_eVq3cw4zW04YeRJ4qg3Ru01';">
+                            BUY NOW
+                        </button>
                     </div>
                 </div>
             </div>
