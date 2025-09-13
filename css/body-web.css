@@ -22,7 +22,7 @@
     --shadow-glow: 0 0 30px rgba(221, 170, 0, 0.4);
 
     --font-primary: 'Montserrat', sans-serif;
-    --font-secondary: 'League Spartan', sans-serif;
+    --font-secondary: 'Roboto', sans-serif;
 
     --section-padding: 5rem 0;
     --container-padding: 0 2rem;
@@ -36,6 +36,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: var(--font-primary);
 }
 
 html {
@@ -44,7 +45,6 @@ html {
 }
 
 body {
-    font-family: var(--font-primary); 
     line-height: 1.6;
     color: var(--gray-dark);
     overflow-x: hidden;

@@ -1,40 +1,100 @@
-    /* Splash Screen */
-    .splash-scppreen {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: #000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 9999;
-      opacity: 1;
-      transition: opacity 1s ease-in-out;
-    }
+.contact-section {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 50px;
+  margin-top: 5%;
+}
 
-/* Isotipo en botones */
-.section-title,
-.section-subtitle {
+/* ============= Contact Form ============= */
+.contact-form {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.08);
+  flex: 2;
+}
+
+.contact-form h2 {
+  margin-bottom: 10px;
+}
+
+.contact-form p {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.contact-form textarea {
+  min-height: 120px;
+  resize: none;
+}
+
+.contact-form button {
+  background: orange;
   color: white;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
-  font-weight: bold;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
 }
 
-    .contact-section {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      padding: 50px;
-    }
+.contact-form button:hover {
+  background: #e69500;
+}
 
-body {
+/* ============= Department Cards ============= */
+.departments {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.08);
+  align-items: center;
+  gap: 10%;
+  border-left: 4px solid orange;
+}
+
+.card img {
+  width: 40px;
+  height: 40px;
+}
+
+.card h3 {
   margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+  font-size: 18px;
 }
 
+.card p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+/* ============= Map ============= */
 .laptop-container {
   position: relative;
   width: 800px;
@@ -58,7 +118,6 @@ body {
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
-
 .backpic2 {
   background-image: url('/assets/img/compu.png');
   background-size: cover;
@@ -68,96 +127,7 @@ body {
   margin-top: -40px;
 }
 
-
-    /* Formulario */
-    .contact-form {
-      background: white;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0px 4px 12px rgba(0,0,0,0.08);
-      flex: 2;
-    }
-
-    .contact-form h2 {
-      margin-bottom: 10px;
-    }
-
-    .contact-form p {
-      margin-bottom: 20px;
-      color: #555;
-    }
-
-    .form-row {
-      display: flex;
-      gap: 15px;
-      margin-bottom: 15px;
-    }
-
-    .contact-form input, 
-    .contact-form textarea {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      font-size: 14px;
-    }
-
-    .contact-form textarea {
-      min-height: 120px;
-      resize: none;
-    }
-
-    .contact-form button {
-      background: orange;
-      color: white;
-      border: none;
-      padding: 12px 20px;
-      border-radius: 8px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    .contact-form button:hover {
-      background: #e69500;
-    }
-
-    /* Tarjetas de departamentos */
-    .departments {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      flex: 1;
-    }
-
-    .card {
-      background: white;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0px 4px 12px rgba(0,0,0,0.08);
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      border-left: 4px solid orange;
-    }
-
-    .card img {
-      width: 40px;
-      height: 40px;
-    }
-
-    .card h3 {
-      margin: 0;
-      font-size: 18px;
-    }
-
-    .card p {
-      margin: 4px 0;
-      font-size: 14px;
-      color: #555;
-    }
-
-
-/* Responsive */
+/* ============= Responsive ============= */
 @media (max-width: 768px) {
     .faq-content {
         grid-template-columns: 1fr;

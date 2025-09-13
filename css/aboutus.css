@@ -48,6 +48,11 @@
     list-style: none;
 }
 
+.main_logo {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     background: #f5f5f5;
@@ -100,13 +105,21 @@ img {
     line-height: 1.4;
 }
 
-p {
+p{
     font-size: 18px;
     color: #333333;
     line-height: 1.4;
     font-weight: 300;
     line-height: 22px;
-    padding: 10px;
+}
+
+.text-with-padding{
+    font-size: 18px;
+    color: #333333;
+    line-height: 1.4;
+    font-weight: 300;
+    line-height: 22px;
+    padding:10px;
 }
 
 .btn-1 {
@@ -154,7 +167,7 @@ h1 {
 
 .values-col {
     flex-basis: 31%;
-    background: #ff9900d5;
+    background: #ff9900d4;
     border-radius: 20px;
     margin-bottom: 5%;
     padding: 20px 12px;
@@ -171,6 +184,13 @@ h3 {
     font-weight: 600;
     margin: 10px 0;
     font-size: 20px;
+}
+
+.values_titles {
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+    font-size: 35px;
 }
 
 .values-col p{
@@ -344,13 +364,7 @@ h3 {
     width: 100%;
     border-radius: 15px;
     transition: all var(--transition-fast);
-}
-
-.whoweare {
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    padding-top: 100px;
+    margin-left:20px
 }
 
 .whoweare-col {
@@ -361,41 +375,51 @@ h3 {
     overflow: hidden;
 }
 
+.whoweare {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
 .whoweare-col img {
     width: 100%;
+    height: 200px; 
+    object-fit: cover;
+    border-radius: 8px;
     display: block;
 }
 
 .layer {
-    background: transparent;
-    height: 100%;
-    width: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    transition: 0.5s;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 127, 13, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.5s ease;
 }
 
-.layer:hover {
-    background: rgb(255, 127, 13, 0.4);
+.whoweare-col:hover .layer {
+    background: rgba(255, 127, 13, 0.4); 
 }
 
 .layer h3 {
-    width: 100%;
-    font-weight: 500;
     color: #fff;
-    font-size: 26px;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    position: absolute;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
     opacity: 0;
-    transition: 0.5s;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-.layer:hover h3 {
-    bottom: 49%;
+.whoweare-col:hover .layer h3 {
     opacity: 1;
+    transform: translateY(0);
 }
 
 .stories {
@@ -419,12 +443,13 @@ h3 {
 .stories-col p {
     padding: 0;
     font-style: italic;
+    text-align: center;
 }
 
 .stories-col h3 {
     margin-top: 16px;
     margin-bottom: 15px;
-    text-align: left;
+    text-align: center;
 }
 
 .banner {
