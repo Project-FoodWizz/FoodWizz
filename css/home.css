@@ -184,12 +184,12 @@ h1 {
     }
 
     .text-content h1 {
-        font-size: 36px; /* Título más pequeño que desktop */
+        font-size: 2em; /* Título más pequeño que desktop */
         text-align: center;
     }
 
     .text-content p {
-        font-size: 16px;
+        font-size: 1em;
         text-align: center;
     }
 
@@ -205,7 +205,7 @@ h1 {
 
     .fw-btn {
         padding: 10px 20px;
-        font-size: 0.9rem;
+        font-size: 1em;
     }
 }
 
@@ -217,7 +217,7 @@ h1 {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-top: 130px;
+        margin-top: 5em;
     }
 
     .px_home_slider .item {
@@ -227,13 +227,13 @@ h1 {
     }
 
     .text-content h1 {
-        font-size: 48px !important; /* Títulos grandes en móvil */
+        font-size: .5rem; /* Títulos grandes en móvil */
         text-align: center;
         line-height: 1.2;
     }
 
     .text-content p {
-        font-size: 32px; /* Texto más grande y legible */
+        font-size: 1em; /* Texto más grande y legible */
         text-align: center;
         line-height: 1.5;
     }
@@ -252,8 +252,8 @@ h1 {
 
     .fw-btn {
         width: 100%; /* Botones ocupan todo el ancho */
-        padding: 16px 0;
-        font-size: 32px; /* Texto grande para móviles */
+        padding: 1rem 0;
+        font-size: 1rem; /* Texto grande para móviles */
         text-align: center;
     }
 

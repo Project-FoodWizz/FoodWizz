@@ -1,5 +1,5 @@
 const container = document.getElementById('container');
-    
+
 // Botones del Overlay
 const signUpOverlayBtn = document.getElementById('signUpOverlay');
 const signInOverlayBtn = document.getElementById('signInOverlay');
@@ -8,19 +8,34 @@ const signInOverlayBtn = document.getElementById('signInOverlay');
 const signUpLink = document.getElementById('signUpLink');
 const signInLink = document.getElementById('signInLink');
 
+// Formularios
+const signUpForm = document.querySelector('.sign-up-container form');
+const signInForm = document.querySelector('.sign-in-container form');
+
+// Funciones para overlay (desktop y tablet)
 const toggleToSignUp = (e) => {
     e.preventDefault();
-    container.classList.add("right-panel-active");
+    if (window.innerWidth > 768) {
+        container.classList.add("right-panel-active");
+    } else {
+        showForm("signup");
+    }
 };
 
 const toggleToSignIn = (e) => {
     e.preventDefault();
-    container.classList.remove("right-panel-active");
+    if (window.innerWidth > 768) {
+        container.classList.remove("right-panel-active");
+    } else {
+        showForm("signin");
+    }
 };
 
 // Listeners para los botones del overlay
-signUpOverlayBtn.addEventListener('click', toggleToSignUp);
-signInOverlayBtn.addEventListener('click', toggleToSignIn);
+if (signUpOverlayBtn && signInOverlayBtn) {
+    signUpOverlayBtn.addEventListener('click', toggleToSignUp);
+    signInOverlayBtn.addEventListener('click', toggleToSignIn);
+}
 
 // Listeners para los links de texto
 signUpLink.addEventListener('click', toggleToSignUp);
@@ -44,15 +59,51 @@ document.querySelectorAll('.password-toggle').forEach(toggle => {
     });
 });
 
+// =======================
+//  Responsive en móvil
+// =======================
+
+// Función para alternar formularios en móvil
+function showForm(formToShow) {
+    if (window.innerWidth <= 768) {
+        const signInContainer = document.querySelector(".sign-in-container");
+        const signUpContainer = document.querySelector(".sign-up-container");
+
+        if (formToShow === "signin") {
+            signInContainer.classList.remove("hidden");
+            signUpContainer.classList.add("hidden");
+        } else {
+            signUpContainer.classList.remove("hidden");
+            signInContainer.classList.add("hidden");
+        }
+    }
+}
+
+// Al cargar, mostrar solo Sign In en móvil
+window.addEventListener("load", () => {
+    if (window.innerWidth <= 768) {
+        showForm("signin");
+    }
+});
+
+// Si cambia el tamaño de pantalla
+window.addEventListener("resize", () => {
+    if (window.innerWidth > 768) {
+        // Restaurar overlay normal
+        const signInContainer = document.querySelector(".sign-in-container");
+        const signUpContainer = document.querySelector(".sign-up-container");
+        signInContainer.classList.remove("hidden");
+        signUpContainer.classList.remove("hidden");
+    } else {
+        showForm("signin");
+    }
+});
+
 //=================================================================
 // ================Importar auth desde conection.js================
 //=================================================================
 
 import { auth, db } from "./Authentication/conection.js";
-
-// Form references
-const signUpForm = document.querySelector('.sign-up-container form');
-const signInForm = document.querySelector('.sign-in-container form');
 
 // --- Sign Up ---
 signUpForm.addEventListener('submit', async (e) => {
@@ -62,21 +113,21 @@ signUpForm.addEventListener('submit', async (e) => {
     const password = document.getElementById('signup-password').value;
 
     try {
-        // Create account in Firebase Auth
+        // Crear cuenta en Firebase Auth
         const userCredential = await auth.createUserWithEmailAndPassword(email, password);
         const user = userCredential.user;
 
-        // Store minimal data in Firestore (optional)
+        // Guardar en Firestore (opcional)
         await db.collection("users").doc(user.uid).set({
             email: email,
             createdAt: new Date()
         });
 
-        console.log("✅ User registered:", user.uid);
+        console.log("User registered:", user.uid);
         alert("Account created successfully 🚀");
 
     } catch (error) {
-        console.error("❌ Sign Up error:", error.message);
+        console.error("Sign Up error:", error.message);
         alert("Sign Up failed: " + error.message);
     }
 });
@@ -90,16 +141,15 @@ signInForm.addEventListener('submit', async (e) => {
 
     try {
         const userCredential = await auth.signInWithEmailAndPassword(email, password);
-        console.log("✅ Signed in:", userCredential.user.uid);
+        console.log("Signed in:", userCredential.user.uid);
 
-        alert("Welcome back 👋");
+        alert("Welcome back!");
 
-        // Redirect to user dashboard
+        // Redirigir al dashboard del usuario
         window.location.href = "user.html";
 
     } catch (error) {
-        console.error("❌ Sign In error:", error.message);
+        console.error("Sign In error:", error.message);
         alert("Sign In failed: " + error.message);
     }
 });
-

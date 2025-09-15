@@ -239,7 +239,7 @@
         content: unset;
     }
     .fw-page-title-section h1 {
-        font-size: 28px;
+        font-size: 1rem;
     }
     .fw-section-title h4 {
         font-size: 22px;
@@ -260,7 +260,12 @@
     }
 
     .fw-banner-content p {
-        font-size: 32px;
+        font-size: 1rem;
+    }
+
+    .fw-banner-content li{
+        font-size: 1rem;
+        text-align: left;
     }
     
     .fw-banner-right {
