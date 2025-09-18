@@ -103,8 +103,17 @@ window.addEventListener("resize", () => {
 // ================Importar auth desde conection.js================
 //=================================================================
 
-import { auth, db } from "./Authentication/conection.js";
+import { auth, db } from "../js/Authentication/conection.js";
+import {
+    GoogleAuthProvider, 
+    GithubAuthProvider, 
+    OAuthProvider,
+    signInWithPopup,
+    createUserWithEmailAndPassword,
+    signInWithEmailAndPassword
+} from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
 
+// ================== LOGIN EMAIL/PASSWORD ==================
 // --- Sign Up ---
 signUpForm.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -153,3 +162,69 @@ signInForm.addEventListener('submit', async (e) => {
         alert("Sign In failed: " + error.message);
     }
 });
+
+// ================== LOGIN SOCIAL ==================
+
+// Google
+const googleBtn = document.getElementById("googleBtn"); // Corregir el ID si es necesario
+if (googleBtn) {
+    googleBtn.addEventListener("click", async (e) => {
+        e.preventDefault();
+        const provider = new GoogleAuthProvider();
+
+        try {
+            const result = await signInWithPopup(auth, provider); // Sintaxis correcta
+            console.log("Google user:", result.user);
+            alert("Welcome with Google 👋");
+            window.location.href = "user.html";
+        } catch (error) {
+            console.error("Google login error:", error.message);
+            alert(error.message);
+        }
+    });
+}
+
+// GitHub
+const githubBtn = document.getElementById('githubBtn');
+
+githubBtn.addEventListener('click', async () => {
+    const provider = new GithubAuthProvider();
+    // And call the function with the 'auth' object
+    const result = await signInWithPopup(auth, provider);
+
+    try {
+        const result = await auth.signInWithPopup(provider);
+        const user = result.user;
+        console.log("GitHub login:", user.uid, user.email);
+        alert("¡Bienvenido con GitHub!");
+        window.location.href = "user.html";
+    } catch (error) {
+        // Manejamos el error específico 'popup-closed-by-user'
+        if (error.code === 'auth/popup-closed-by-user') {
+            console.warn("El usuario cerró la ventana de inicio de sesión.");
+            // No mostramos una alerta al usuario.
+        } else {
+            // Manejamos otros errores de autenticación
+            console.error("Error en GitHub login:", error);
+            alert("El inicio de sesión con GitHub falló: " + error.message);
+        }
+    }
+});
+
+// Microsoft
+const microsoftBtn = document.getElementById("microsoftBtn"); // Corregir el ID
+if (microsoftBtn) {
+    microsoftBtn.addEventListener("click", async (e) => {
+        e.preventDefault();
+        const provider = new OAuthProvider("microsoft.com"); // Sintaxis correcta
+        try {
+            const result = await signInWithPopup(auth, provider); // Sintaxis correcta
+            console.log("Microsoft user:", result.user);
+            alert("Welcome with Microsoft");
+            window.location.href = "user.html";
+        } catch (error) {
+            console.error("Microsoft login error:", error.message);
+            alert(error.message);
+        }
+    });
+}
