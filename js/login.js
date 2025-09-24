@@ -1,18 +1,18 @@
 const container = document.getElementById('container');
 
-// Botones del Overlay
+// Overlay buttons
 const signUpOverlayBtn = document.getElementById('signUpOverlay');
 const signInOverlayBtn = document.getElementById('signInOverlay');
 
-// Links de texto
+// Text links
 const signUpLink = document.getElementById('signUpLink');
 const signInLink = document.getElementById('signInLink');
 
-// Formularios
+// Forms
 const signUpForm = document.querySelector('.sign-up-container form');
 const signInForm = document.querySelector('.sign-in-container form');
 
-// Funciones para overlay (desktop y tablet)
+// Overlay functions (desktop and tablet)
 const toggleToSignUp = (e) => {
     e.preventDefault();
     if (window.innerWidth > 768) {
@@ -31,24 +31,24 @@ const toggleToSignIn = (e) => {
     }
 };
 
-// Listeners para los botones del overlay
+// Listeners for overlay buttons
 if (signUpOverlayBtn && signInOverlayBtn) {
     signUpOverlayBtn.addEventListener('click', toggleToSignUp);
     signInOverlayBtn.addEventListener('click', toggleToSignIn);
 }
 
-// Listeners para los links de texto
+// Listeners for text links
 signUpLink.addEventListener('click', toggleToSignUp);
 signInLink.addEventListener('click', toggleToSignIn);
 
-// Funcionalidad mostrar/ocultar contraseña
+// Show/hide password functionality
 document.querySelectorAll('.password-toggle').forEach(toggle => {
     toggle.addEventListener('click', () => {
-        const input = toggle.previousElementSibling; // El input justo antes del icono
+        const input = toggle.previousElementSibling;
         const type = input.getAttribute('type') === 'password' ? 'text' : 'password';
         input.setAttribute('type', type);
 
-        // Cambiar icono
+        // Change icon
         if (type === 'password') {
             toggle.classList.remove('ri-eye-line');
             toggle.classList.add('ri-eye-off-line');
@@ -60,10 +60,10 @@ document.querySelectorAll('.password-toggle').forEach(toggle => {
 });
 
 // =======================
-//  Responsive en móvil
+//  Mobile responsive
 // =======================
 
-// Función para alternar formularios en móvil
+// Function to toggle forms on mobile
 function showForm(formToShow) {
     if (window.innerWidth <= 768) {
         const signInContainer = document.querySelector(".sign-in-container");
@@ -79,17 +79,17 @@ function showForm(formToShow) {
     }
 }
 
-// Al cargar, mostrar solo Sign In en móvil
+// On load, show only Sign In on mobile
 window.addEventListener("load", () => {
     if (window.innerWidth <= 768) {
         showForm("signin");
     }
 });
 
-// Si cambia el tamaño de pantalla
+// If screen size changes
 window.addEventListener("resize", () => {
     if (window.innerWidth > 768) {
-        // Restaurar overlay normal
+        // Restore normal overlay
         const signInContainer = document.querySelector(".sign-in-container");
         const signUpContainer = document.querySelector(".sign-up-container");
         signInContainer.classList.remove("hidden");
@@ -100,40 +100,59 @@ window.addEventListener("resize", () => {
 });
 
 //=================================================================
-// ================Importar auth desde conection.js================
+// ================Import auth from connection.js================
 //=================================================================
 
-import { auth, db } from "../js/Authentication/conection.js";
+import { auth, db } from "./Authentication/conection.js";
 import {
     GoogleAuthProvider, 
     GithubAuthProvider, 
     OAuthProvider,
     signInWithPopup,
     createUserWithEmailAndPassword,
-    signInWithEmailAndPassword
+    signInWithEmailAndPassword,
+    fetchSignInMethodsForEmail,
+    updateProfile
 } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
+import { 
+    doc, 
+    setDoc, 
+    serverTimestamp 
+} from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js";
 
-// ================== LOGIN EMAIL/PASSWORD ==================
+// ================== EMAIL/PASSWORD LOGIN ==================
+
 // --- Sign Up ---
 signUpForm.addEventListener('submit', async (e) => {
     e.preventDefault();
 
+    const businessName = document.getElementById('signup-name').value;
     const email = document.getElementById('signup-email').value;
     const password = document.getElementById('signup-password').value;
 
     try {
-        // Crear cuenta en Firebase Auth
-        const userCredential = await auth.createUserWithEmailAndPassword(email, password);
+        // Create account in Firebase Auth
+        const userCredential = await createUserWithEmailAndPassword(auth, email, password);
         const user = userCredential.user;
 
-        // Guardar en Firestore (opcional)
-        await db.collection("users").doc(user.uid).set({
+        // Update user profile with business name
+        await updateProfile(user, {
+            displayName: businessName
+        });
+
+        // Save to Firestore
+        await setDoc(doc(db, "users", user.uid), {
+            businessName: businessName,
             email: email,
-            createdAt: new Date()
+            createdAt: serverTimestamp(),
+            authProvider: "email"
         });
 
         console.log("User registered:", user.uid);
-        alert("Account created successfully 🚀");
+        alert("Account created successfully! 🚀");
+        
+        // Redirect to dashboard
+        window.location.href = "dashboard.html";
 
     } catch (error) {
         console.error("Sign Up error:", error.message);
@@ -145,86 +164,164 @@ signUpForm.addEventListener('submit', async (e) => {
 signInForm.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    const email = document.getElementById('signin-email').value;
-    const password = document.getElementById('signin-password').value;
+    const email = document.getElementById('signin-email').value.trim();
+    const password = document.getElementById('signin-password').value.trim();
 
     try {
-        const userCredential = await auth.signInWithEmailAndPassword(email, password);
+        const userCredential = await signInWithEmailAndPassword(auth, email, password);
         console.log("Signed in:", userCredential.user.uid);
 
         alert("Welcome back!");
 
-        // Redirigir al dashboard del usuario
-        window.location.href = "user.html";
+        // Redirect to dashboard
+        window.location.href = "dashboard.html";
 
     } catch (error) {
         console.error("Sign In error:", error.message);
-        alert("Sign In failed: " + error.message);
+        let errorMessage = "Sign In failed: ";
+        
+        switch(error.code) {
+            case 'auth/invalid-login-credentials':
+            case 'auth/invalid-credential':
+            case 'auth/user-not-found':
+                errorMessage += "No account found with this email.";
+                break;
+            case 'auth/wrong-password':
+                errorMessage += "Incorrect password.";
+                break;
+            case 'auth/invalid-email':
+                errorMessage += "Invalid email address.";
+                break;
+            case 'auth/user-disabled':
+                errorMessage += "This account has been disabled.";
+                break;
+            default:
+                errorMessage += error.message;
+        }
+        
+        // If the issue is invalid credentials or no user, check sign-in methods to guide the user
+        if (['auth/invalid-login-credentials','auth/invalid-credential','auth/user-not-found','auth/wrong-password'].includes(error.code)) {
+            try {
+                const methods = await fetchSignInMethodsForEmail(auth, email);
+                if (methods && methods.length > 0) {
+                    // Map Firebase methods to user-friendly provider names
+                    const providerHints = methods.map(m => {
+                        if (m === 'google.com') return 'Google';
+                        if (m === 'github.com') return 'GitHub';
+                        if (m === 'microsoft.com') return 'Microsoft';
+                        if (m === 'password') return 'Email & Password';
+                        return m;
+                    }).join(', ');
+                    alert(`${errorMessage}\nThis email is registered with: ${providerHints}. Please use the corresponding sign-in button or reset your password.`);
+                } else {
+                    alert(`${errorMessage}\nNo sign-in methods found. You may need to sign up first.`);
+                }
+            } catch (mError) {
+                console.warn('Could not fetch sign-in methods:', mError);
+                alert(errorMessage);
+            }
+        } else {
+            alert(errorMessage);
+        }
     }
 });
 
-// ================== LOGIN SOCIAL ==================
+// ================== SOCIAL LOGIN ==================
 
 // Google
-const googleBtn = document.getElementById("googleBtn"); // Corregir el ID si es necesario
+const googleBtn = document.getElementById("googleBtn");
 if (googleBtn) {
     googleBtn.addEventListener("click", async (e) => {
         e.preventDefault();
         const provider = new GoogleAuthProvider();
 
         try {
-            const result = await signInWithPopup(auth, provider); // Sintaxis correcta
+            const result = await signInWithPopup(auth, provider);
+            const user = result.user;
+            
+            // Save user data to Firestore
+            await setDoc(doc(db, "users", user.uid), {
+                businessName: user.displayName || "Google User",
+                email: user.email,
+                createdAt: serverTimestamp(),
+                authProvider: "google",
+                photoURL: user.photoURL
+            }, { merge: true });
+            
             console.log("Google user:", result.user);
-            alert("Welcome with Google 👋");
-            window.location.href = "user.html";
+            alert("Welcome with Google! 👋");
+            window.location.href = "dashboard.html";
         } catch (error) {
             console.error("Google login error:", error.message);
-            alert(error.message);
+            if (error.code !== 'auth/popup-closed-by-user') {
+                alert("Google sign-in failed: " + error.message);
+            }
         }
     });
 }
 
 // GitHub
 const githubBtn = document.getElementById('githubBtn');
+if (githubBtn) {
+    githubBtn.addEventListener('click', async (e) => {
+        e.preventDefault();
+        const provider = new GithubAuthProvider();
 
-githubBtn.addEventListener('click', async () => {
-    const provider = new GithubAuthProvider();
-    // And call the function with the 'auth' object
-    const result = await signInWithPopup(auth, provider);
-
-    try {
-        const result = await auth.signInWithPopup(provider);
-        const user = result.user;
-        console.log("GitHub login:", user.uid, user.email);
-        alert("¡Bienvenido con GitHub!");
-        window.location.href = "user.html";
-    } catch (error) {
-        // Manejamos el error específico 'popup-closed-by-user'
-        if (error.code === 'auth/popup-closed-by-user') {
-            console.warn("El usuario cerró la ventana de inicio de sesión.");
-            // No mostramos una alerta al usuario.
-        } else {
-            // Manejamos otros errores de autenticación
-            console.error("Error en GitHub login:", error);
-            alert("El inicio de sesión con GitHub falló: " + error.message);
+        try {
+            const result = await signInWithPopup(auth, provider);
+            const user = result.user;
+            
+            // Save user data to Firestore
+            await setDoc(doc(db, "users", user.uid), {
+                businessName: user.displayName || "GitHub User",
+                email: user.email,
+                createdAt: serverTimestamp(),
+                authProvider: "github",
+                photoURL: user.photoURL
+            }, { merge: true });
+            
+            console.log("GitHub login:", user.uid, user.email);
+            alert("Welcome with GitHub! 👋");
+            window.location.href = "dashboard.html";
+        } catch (error) {
+            if (error.code === 'auth/popup-closed-by-user') {
+                console.warn("User closed the sign-in popup.");
+            } else {
+                console.error("GitHub login error:", error);
+                alert("GitHub sign-in failed: " + error.message);
+            }
         }
-    }
-});
+    });
+}
 
 // Microsoft
-const microsoftBtn = document.getElementById("microsoftBtn"); // Corregir el ID
+const microsoftBtn = document.getElementById("microsoftBtn");
 if (microsoftBtn) {
     microsoftBtn.addEventListener("click", async (e) => {
         e.preventDefault();
-        const provider = new OAuthProvider("microsoft.com"); // Sintaxis correcta
+        const provider = new OAuthProvider("microsoft.com");
+        
         try {
-            const result = await signInWithPopup(auth, provider); // Sintaxis correcta
+            const result = await signInWithPopup(auth, provider);
+            const user = result.user;
+            
+            // Save user data to Firestore
+            await setDoc(doc(db, "users", user.uid), {
+                businessName: user.displayName || "Microsoft User",
+                email: user.email,
+                createdAt: serverTimestamp(),
+                authProvider: "microsoft",
+                photoURL: user.photoURL
+            }, { merge: true });
+            
             console.log("Microsoft user:", result.user);
-            alert("Welcome with Microsoft");
-            window.location.href = "user.html";
+            alert("Welcome with Microsoft! 👋");
+            window.location.href = "dashboard.html";
         } catch (error) {
             console.error("Microsoft login error:", error.message);
-            alert(error.message);
+            if (error.code !== 'auth/popup-closed-by-user') {
+                alert("Microsoft sign-in failed: " + error.message);
+            }
         }
     });
 }
