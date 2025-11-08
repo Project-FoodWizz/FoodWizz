@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     background-color: #eef1f7;
     color: #333;
     display: flex;
@@ -37,9 +37,10 @@ body {
 /* --- MAIN CONTAINER --- */
 .container {
     position: relative;
+    margin: 4rem auto;
     width: 1000px;
     max-width: 100%;
-    min-height: 600px;
+    min-height: 550px;
     background-color: var(--background-color);
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
@@ -85,8 +86,6 @@ body {
     align-items: center;
     margin-bottom: 25px;
 }
-
-
 
 .form-header p {
     color: var(--light-text-color);
@@ -287,4 +286,50 @@ button.ghost-btn:hover {
     transform: translateX(100%);
     opacity: 1; /* It appears when entering */
     z-index: 5; /* It is put on top */
+}
+
+/* --- RESPONSIVE DESIGN --- */
+/* Móviles (≤768px) */
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+        align-items: flex-start;
+    }
+
+    .container {
+        margin: 4rem auto;
+        width: 100%;
+        height: 33rem;
+        min-height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 2rem;
+    }
+
+    .form-container {
+        position: relative;
+        width: 100%;
+        height: auto;
+        opacity: 1;
+        transform: translateX(0) !important; /* Desactivamos animación lateral */
+    }
+
+    .overlay-container {
+        display: none; /* Quitamos overlay en móviles */
+    }
+
+    /* Solo mostramos el formulario activo */
+    .form-container.hidden {
+        display: none;
+    }
+
+    .form-header h1 {
+        font-size: 1.5rem;
+    }
+
+    button.primary-btn {
+        font-size: 1rem;
+        padding: 12px;
+    }
 }
